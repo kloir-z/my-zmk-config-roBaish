@@ -20,42 +20,22 @@
             bindings = <&kp TAB>;
             key-positions = <11 12>;
         };
-
-        shift_tab {
-            bindings = <&kp LS(TAB)>;
-            key-positions = <12 13>;
-        };
-
-        muhennkann {
-            bindings = <&to_layer_0 INT_MUHENKAN>;
-            key-positions = <11 10>;
-        };
-
-        double_quotation {
-            bindings = <&kp DOUBLE_QUOTES>;
-            key-positions = <20 21>;
-        };
-
-        eq {
-            bindings = <&kp EQUAL>;
-            key-positions = <24 25>;
-        };
     };
 
     macros {
-        to_layer_0: to_layer_0 {
+        to0_kp: to0_kp {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
-            label = "TO_LAYER_0";
+            label = "TO0_KP";
         };
     };
 
     behaviors {
-        lt_to_layer_0: lt_to_layer_0 {
+        lt_mo_to0_kp: lt_mo_to0_kp {
             compatible = "zmk,behavior-hold-tap";
-            label = "LAYER_TAP_TO_0";
-            bindings = <&mo>, <&to_layer_0>;
+            label = "lt_mo_to0_kp";
+            bindings = <&mo>, <&to0_kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -67,10 +47,10 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W         &kp E         &kp R                        &kp T                                                          &kp Y            &kp U  &lt 5 I    &kp O    &kp P
-&kp A             &kp S         &kp D         &kp F                        &kp G        &kp LS(LG(S))                      &kp MINUS      &kp H            &kp J  &kp K      &kp L    &kp SQT
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                        &kp B        &kp COLON                          &kp SEMICOLON  &kp N            &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 6 INT_HENKAN  &lt 2 SPACE  &lt_to_layer_0 3 INT_MUHENKAN      &kp ENTER      &lt 1 BACKSPACE                             &kp DEL
+&kp Q             &kp W         &kp E         &kp R                       &kp T                                                     &kp Y            &kp U  &lt 5 I    &kp O    &kp P
+&kp A             &kp S         &kp D         &kp F                       &kp G        &none                             &trans     &kp H            &kp J  &kp K      &kp L    &kp SQT
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                       &kp B        &trans                            &trans     &kp N            &kp M  &kp COMMA  &kp DOT  &kp SLASH
+&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_mo_to0_kp 6 INT_HENKAN  &lt 2 SPACE  &lt_mo_to0_kp 3 INT_MUHENKAN      &kp ENTER  &lt 1 BACKSPACE                             &kp DEL
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
