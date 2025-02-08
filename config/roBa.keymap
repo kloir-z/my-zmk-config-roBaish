@@ -18,7 +18,47 @@
 
         tab {
             bindings = <&kp TAB>;
-            key-positions = <11 12>;
+            key-positions = <10 11>;
+        };
+
+        escape {
+            bindings = <&kp ESCAPE>;
+            key-positions = <0 1>;
+        };
+
+        plus {
+            bindings = <&kp PLUS>;
+            key-positions = <1 3>;
+        };
+
+        minus {
+            bindings = <&kp MINUS>;
+            key-positions = <11 13>;
+        };
+
+        aster {
+            bindings = <&kp ASTERISK>;
+            key-positions = <23 25>;
+        };
+
+        slash {
+            bindings = <&kp SLASH>;
+            key-positions = <10 12>;
+        };
+
+        equal {
+            bindings = <&kp EQUAL>;
+            key-positions = <12 14>;
+        };
+
+        BS {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <8 9>;
+        };
+
+        enter {
+            bindings = <&kp ENTER>;
+            key-positions = <20 21>;
         };
     };
 
@@ -76,10 +116,10 @@
 
         Function {
             bindings = <
-&kp ESCAPE      &kp LC(LS(TAB))         &kp UP_ARROW    &kp LC(TAB)              &trans                       &trans  &trans  &trans  &trans  &trans
-&kp HOME        &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp END  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &trans          &kp LG(LS(RIGHT_ARROW))  &trans   &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans          &trans                  &trans          &trans                   &trans   &trans      &trans  &trans                          &trans
+&kp K_MUTE  &kp LC(LS(C_VOL_DN))  &kp C_VOLUME_UP  &trans      &trans                          &trans  &kp F9  &kp F10  &kp F11  &kp F12
+&trans      &trans                &trans           &trans      &trans      &trans      &trans  &trans  &kp F5  &kp F6   &kp F7   &kp F8
+&trans      &trans                &trans           &kp DELETE  &kp DELETE  &trans      &trans  &trans  &kp F1  &kp F2   &kp F3   &kp F4
+&trans      &trans                &trans           &trans      &trans      &trans      &trans  &trans                            &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
