@@ -17,7 +17,7 @@
         };
 
         escape {
-            bindings = <&kp ESCAPE>;
+            bindings = <&esc_lang2>;
             key-positions = <0 1>;
         };
 
@@ -97,18 +97,72 @@
         };
 
         shift {
-            bindings = <&kp LEFT_SHIFT>;
+            bindings = <&smart_shift LEFT_SHIFT LEFT_SHIFT>;
             key-positions = <11 12>;
         };
 
         shift2 {
-            bindings = <&kp LEFT_SHIFT>;
+            bindings = <&smart_shift LEFT_SHIFT LEFT_SHIFT>;
             key-positions = <20 19>;
         };
 
         alt_f4 {
             bindings = <&kp LA(F4)>;
             key-positions = <0 2 1>;
+        };
+
+        we {
+            bindings = <&caps_word>;
+            key-positions = <1 2>;
+        };
+
+        io {
+            bindings = <&caps_word>;
+            key-positions = <7 8>;
+        };
+
+        up {
+            bindings = <&brac>;
+            key-positions = <6 9>;
+        };
+
+        jmin {
+            bindings = <&parent>;
+            key-positions = <18 21>;
+        };
+    };
+
+    macros {
+        parent: parent {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp LEFT>;
+            label = "PARENT";
+        };
+
+        brac: brac {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_BRACKET &kp RIGHT_BRACKET &kp LEFT>;
+            label = "BRAC";
+        };
+
+        esc_lang2: esc_lang2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp ESCAPE &kp INT_MUHENKAN>;
+            label = "ESC_LANG2";
+        };
+    };
+
+    behaviors {
+        smart_shift: smart_shift {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SMART_SHIFT";
+            bindings = <&kp>, <&sk>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
         };
     };
 
