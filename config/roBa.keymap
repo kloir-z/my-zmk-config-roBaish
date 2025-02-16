@@ -21,31 +21,6 @@
             key-positions = <0 1>;
         };
 
-        wr_as_plus {
-            bindings = <&kp PLUS>;
-            key-positions = <1 3>;
-        };
-
-        sf_as_minus {
-            bindings = <&kp MINUS>;
-            key-positions = <11 13>;
-        };
-
-        xv_as_astre {
-            bindings = <&kp ASTERISK>;
-            key-positions = <23 25>;
-        };
-
-        ad_as_slash {
-            bindings = <&kp SLASH>;
-            key-positions = <10 12>;
-        };
-
-        dg_as_equal {
-            bindings = <&kp EQUAL>;
-            key-positions = <12 14>;
-        };
-
         op_as_bs {
             bindings = <&kp BACKSPACE>;
             key-positions = <8 9>;
@@ -57,37 +32,37 @@
         };
 
         uo_as_lbrac {
-            bindings = <&kp LEFT_BRACKET>;
+            bindings = <&kp RIGHT_BRACKET>;
             key-positions = <6 8>;
         };
 
         ip_as_rbrac {
-            bindings = <&kp RIGHT_BRACKET>;
+            bindings = <&kp BACKSLASH>;
             key-positions = <7 9>;
         };
 
         jl_as_lparen {
-            bindings = <&kp LEFT_PARENTHESIS>;
+            bindings = <&kp RIGHT_PARENTHESIS>;
             key-positions = <18 20>;
         };
 
         kmin_as_rparen {
-            bindings = <&kp RIGHT_PARENTHESIS>;
+            bindings = <&kp ASTERISK>;
             key-positions = <19 21>;
         };
 
         mdot_as_lbrace {
-            bindings = <&kp LEFT_BRACE>;
+            bindings = <&kp RIGHT_BRACE>;
             key-positions = <30 32>;
         };
 
         comslash_as_rbrace {
-            bindings = <&kp RIGHT_BRACE>;
+            bindings = <&kp PIPE>;
             key-positions = <31 33>;
         };
 
         df_as_muhenkan {
-            bindings = <&kp INT_MUHENKAN>;
+            bindings = <&kp LANGUAGE_2>;
             key-positions = <13 12>;
         };
 
@@ -97,12 +72,12 @@
         };
 
         sd_as_smartshift {
-            bindings = <&smart_shift LEFT_SHIFT LEFT_SHIFT>;
+            bindings = <&kp LEFT_SHIFT>;
             key-positions = <11 12>;
         };
 
         kl_as_smartshift {
-            bindings = <&smart_shift LEFT_SHIFT LEFT_SHIFT>;
+            bindings = <&kp LEFT_SHIFT>;
             key-positions = <20 19>;
         };
 
@@ -136,21 +111,21 @@
         parent: parent {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp LEFT>;
+            bindings = <&kp RIGHT_PARENTHESIS &kp ASTERISK &kp LEFT>;
             label = "PARENT";
         };
 
         brac: brac {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_BRACKET &kp RIGHT_BRACKET &kp LEFT>;
+            bindings = <&kp RIGHT_BRACKET &kp BACKSLASH &kp LEFT>;
             label = "BRAC";
         };
 
         esc_lang2: esc_lang2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp ESCAPE &kp INT_MUHENKAN>;
+            bindings = <&kp ESCAPE &kp LANGUAGE_2>;
             label = "ESC_LANG2";
         };
     };
@@ -180,10 +155,10 @@
 
         Symbol {
             bindings = <
-&kp EXCLAMATION  &kp DOUBLE_QUOTES  &kp HASH      &kp DOLLAR    &kp PERCENT                    &kp AMPERSAND  &kp SQT       &kp EQUAL  &kp CARET       &kp NON_US_BACKSLASH
-&kp NUMBER_1     &kp NUMBER_2       &kp NUMBER_3  &kp NUMBER_4  &kp N5       &none      &none  &kp PLUS       &kp TILDE     &kp PIPE   &kp AT_SIGN     &kp COLON
-&kp NUMBER_6     &kp N7             &kp N8        &kp N9        &kp N0       &none      &none  &none          &kp ASTERISK  &kp GRAVE  &kp UNDERSCORE  &kp SEMICOLON
-&none            &none              &none         &none         &none        &none      &none  &none                                                   &none
+&kp EXCLAMATION  &kp AT        &kp HASH      &kp DOLLAR    &kp PERCENT                    &kp CARET  &kp AMPERSAND      &kp UNDER                 &kp EQUAL         &kp NON_US_BACKSLASH
+&kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5       &none      &none  &kp COLON  &kp PLUS           &kp LS(NON_US_BACKSLASH)  &kp LEFT_BRACKET  &kp SINGLE_QUOTE
+&kp NUMBER_6     &kp N7        &kp N8        &kp N9        &kp N0       &none      &none  &none      &kp DOUBLE_QUOTES  &kp LEFT_BRACE            &kp UNDERSCORE    &kp SEMICOLON
+&none            &none         &none         &none         &none        &none      &none  &none                                                                     &none
             >;
         };
 
