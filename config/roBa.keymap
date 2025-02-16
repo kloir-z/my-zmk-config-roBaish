@@ -65,14 +65,14 @@
             bindings = <&kp PIPE>;
             key-positions = <31 33>;
         };
-
+        
         df_as_muhenkan {
-            bindings = <&kp LANGUAGE_2>;
+            bindings = <&muhenkan_to_default>;
             key-positions = <13 12>;
         };
 
         jk_as_henkan {
-            bindings = <&kp INT_HENKAN>;
+            bindings = <&henkan_to_default>;
             key-positions = <19 18>;
         };
 
@@ -142,6 +142,20 @@
             #binding-cells = <0>;
             bindings = <&kp ESCAPE &kp LANGUAGE_2 &to 0>;
             label = "ESC_LANG2";
+        };
+        
+        muhenkan_to_default: muhenkan_to_default {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to 0 &kp LANGUAGE_2>;
+            label = "MUHENKAN_TO_DEFAULT";
+        };
+
+        henkan_to_default: henkan_to_default {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to 0 &kp LANGUAGE_1>;
+            label = "HENKAN_TO_DEFAULT";
         };
     };
 
