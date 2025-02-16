@@ -22,7 +22,7 @@
         };
 
         op_as_bs {
-            bindings = <&bs_to_default>;
+            bindings = <&ht_bs_default BACKSPACE BACKSPACE>;
             key-positions = <8 9>;
         };
 
@@ -32,7 +32,7 @@
         };
 
         lmin_as_enter {
-            bindings = <&enter_to_default>;
+            bindings = <&ht_enter_default ENTER ENTER>;
             key-positions = <20 21>;
         };
 
@@ -174,13 +174,22 @@
     };
 
     behaviors {
-        smart_shift: smart_shift {
+        ht_bs_default: ht_bs_default {
             compatible = "zmk,behavior-hold-tap";
-            label = "SMART_SHIFT";
-            bindings = <&kp>, <&sk>;
-
+            label = "BACKSPACE_TO_DEFAULT";
             #binding-cells = <2>;
+            flavor = "tap-preferred";
             tapping-term-ms = <200>;
+            bindings = <&kp>, <&bs_to_default>;
+        };
+
+        ht_enter_default: ht_enter_default {
+            compatible = "zmk,behavior-hold-tap";
+            label = "ENTER_TO_DEFAULT";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&kp>, <&enter_to_default>;
         };
     };
 
