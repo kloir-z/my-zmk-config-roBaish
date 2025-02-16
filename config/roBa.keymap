@@ -26,6 +26,11 @@
             key-positions = <8 9>;
         };
 
+        pl_as_del {
+            bindings = <&kp DELETE>;
+            key-positions = <9 20>;
+        };
+
         lmin_as_enter {
             bindings = <&kp ENTER>;
             key-positions = <20 21>;
@@ -165,10 +170,10 @@
 
         Symbol {
             bindings = <
-&kp EXCLAMATION  &kp AT        &kp HASH      &kp DOLLAR    &kp PERCENT                    &kp CARET  &kp AMPERSAND      &kp UNDER                 &kp EQUAL         &kp NON_US_BACKSLASH
-&kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5       &none      &none  &kp COLON  &kp PLUS           &kp LS(NON_US_BACKSLASH)  &kp LEFT_BRACKET  &kp SINGLE_QUOTE
-&kp NUMBER_6     &kp N7        &kp N8        &kp N9        &kp N0       &none      &none  &none      &kp DOUBLE_QUOTES  &kp LEFT_BRACE            &kp UNDERSCORE    &kp SEMICOLON
-&none            &none         &none         &none         &none        &none      &none  &none                                                                     &none
+&kp EXCLAMATION  &kp AT        &kp HASH      &kp DOLLAR    &kp PERCENT                    &kp CARET  &kp AMPERSAND      &kp UNDER                 &kp EQUAL         &kp 0x89
+&kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5       &none      &none  &kp COLON  &kp PLUS           &kp 0x289                 &kp LEFT_BRACKET  &kp SINGLE_QUOTE
+&kp NUMBER_6     &kp N7        &kp N8        &kp N9        &kp N0       &none      &none  &none      &kp DOUBLE_QUOTES  &kp LEFT_BRACE            &kp 0x287    &kp SEMICOLON
+&none            &none         &none         &none         &none        &none      &none  &none                                                                       &none
             >;
         };
 
