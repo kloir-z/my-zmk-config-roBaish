@@ -105,6 +105,16 @@
             bindings = <&parent>;
             key-positions = <18 21>;
         };
+
+        qwvb_as_bootloader {
+            bindings = <&bootloader>;
+            key-positions = <0 1 25 26>;
+        };
+
+        opnm_as_bootloader {
+            bindings = <&bootloader>;
+            key-positions = <8 9 29 30>;
+        };
     };
 
     macros {
