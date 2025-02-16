@@ -182,7 +182,7 @@
 &kp EXCLAMATION  &kp AT        &kp HASH      &kp DOLLAR    &kp PERCENT                    &kp CARET  &kp AMPERSAND      &kp UNDER                 &kp EQUAL         &kp 0x89
 &kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5       &none      &none  &kp COLON  &kp PLUS           &kp LS(0x89)              &kp LEFT_BRACKET  &kp SINGLE_QUOTE
 &kp NUMBER_6     &kp N7        &kp N8        &kp N9        &kp N0       &none      &none  &none      &kp DOUBLE_QUOTES  &kp LEFT_BRACE            &kp LS(0x87)      &kp SEMICOLON
-&none            &none         &none         &none         &none        &none      &none  &none                                                                       &none
+&trans           &trans        &trans        &trans        &trans       &trans     &trans &trans                                                                    &trans
             >;
         };
 
@@ -191,7 +191,7 @@
 &kp COLON     &kp N7        &kp N8        &kp N9        &none                         &kp LC(W)       &kp LA(LEFT)    &kp LA(RIGHT)  &kp LC(PAGE_UP)  &kp LC(PAGE_DOWN)
 &kp NUMBER_0  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp COMMA   &none      &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW   &kp RIGHT_ARROW  &kp PAGE_UP
 &none         &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD  &none      &none  &kp HOME        &mkp MB1        &mo 5          &mkp MB2         &kp PAGE_DOWN
-&none         &none         &none         &none         &none       &none      &none  &none                                                           &none
+&trans        &trans        &trans        &trans        &trans      &trans     &trans &trans                                                          &trans
             >;
         };
 
@@ -200,7 +200,7 @@
 &kp C_MUTE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &none            &none                    &none  &kp F9  &kp F10  &kp F11  &kp F12
 &none       &none              &none            &kp PRINTSCREEN  &none  &none      &none  &none  &kp F5  &kp F6   &kp F7   &kp F8
 &none       &none              &none            &none            &none  &none      &none  &none  &kp F1  &kp F2   &kp F3   &kp F4
-&none       &none              &none            &none            &none  &none      &none  &none                            &none
+&trans      &trans             &trans           &trans           &trans &trans     &trans &trans                           &trans
             >;
         };
 
@@ -209,7 +209,7 @@
 &none  &none  &none  &none  &none                    &none  &none  &none  &none  &none
 &none  &none  &none  &none  &none  &none      &none  &none  &none  &none  &none  &none
 &none  &none  &none  &none  &none  &none      &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none      &none  &none                       &none
+&trans &trans &trans &trans &trans &trans     &trans &trans                      &trans
             >;
         };
 
