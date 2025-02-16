@@ -11,122 +11,122 @@
     combos {
         compatible = "zmk,combos";
 
-        tab {
+        as_as_tab {
             bindings = <&kp TAB>;
             key-positions = <10 11>;
         };
 
-        escape {
+        qw_as_esc_lang2 {
             bindings = <&esc_lang2>;
             key-positions = <0 1>;
         };
 
-        plus {
+        wr_as_plus {
             bindings = <&kp PLUS>;
             key-positions = <1 3>;
         };
 
-        minus {
+        sf_as_minus {
             bindings = <&kp MINUS>;
             key-positions = <11 13>;
         };
 
-        aster {
+        xv_as_astre {
             bindings = <&kp ASTERISK>;
             key-positions = <23 25>;
         };
 
-        slash {
+        ad_as_slash {
             bindings = <&kp SLASH>;
             key-positions = <10 12>;
         };
 
-        equal {
+        dg_as_equal {
             bindings = <&kp EQUAL>;
             key-positions = <12 14>;
         };
 
-        BS {
+        op_as_bs {
             bindings = <&kp BACKSPACE>;
             key-positions = <8 9>;
         };
 
-        enter {
+        lmin_as_enter {
             bindings = <&kp ENTER>;
             key-positions = <20 21>;
         };
 
-        l_parenth {
-            bindings = <&kp LEFT_PARENTHESIS>;
+        uo_as_lbrac {
+            bindings = <&kp LEFT_BRACKET>;
             key-positions = <6 8>;
         };
 
-        r_parent {
-            bindings = <&kp RIGHT_PARENTHESIS>;
+        ip_as_rbrac {
+            bindings = <&kp RIGHT_BRACKET>;
             key-positions = <7 9>;
         };
 
-        l_brac {
-            bindings = <&kp LEFT_BRACKET>;
+        jl_as_lparen {
+            bindings = <&kp LEFT_PARENTHESIS>;
             key-positions = <18 20>;
         };
 
-        r_brac {
-            bindings = <&kp RIGHT_BRACKET>;
+        kmin_as_rparen {
+            bindings = <&kp RIGHT_PARENTHESIS>;
             key-positions = <19 21>;
         };
 
-        l_brace {
+        mdot_as_lbrace {
             bindings = <&kp LEFT_BRACE>;
             key-positions = <30 32>;
         };
 
-        r_brace {
+        comslash_as_rbrace {
             bindings = <&kp RIGHT_BRACE>;
             key-positions = <31 33>;
         };
 
-        muhenkan {
+        df_as_muhenkan {
             bindings = <&kp INT_MUHENKAN>;
             key-positions = <13 12>;
         };
 
-        henkan {
+        jk_as_henkan {
             bindings = <&kp INT_HENKAN>;
             key-positions = <19 18>;
         };
 
-        shift {
+        sd_as_smartshift {
             bindings = <&smart_shift LEFT_SHIFT LEFT_SHIFT>;
             key-positions = <11 12>;
         };
 
-        shift2 {
+        kl_as_smartshift {
             bindings = <&smart_shift LEFT_SHIFT LEFT_SHIFT>;
             key-positions = <20 19>;
         };
 
-        alt_f4 {
+        qwe_as_alt_f4 {
             bindings = <&kp LA(F4)>;
             key-positions = <0 2 1>;
         };
 
-        we {
+        we_as_capsword {
             bindings = <&caps_word>;
             key-positions = <1 2>;
         };
 
-        io {
+        io_as_capsword {
             bindings = <&caps_word>;
             key-positions = <7 8>;
         };
 
-        up {
+        up_as_lrbrac {
             bindings = <&brac>;
             key-positions = <6 9>;
         };
 
-        jmin {
+        jmin_as_lrparen {
             bindings = <&parent>;
             key-positions = <18 21>;
         };
