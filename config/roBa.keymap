@@ -382,10 +382,10 @@
 
         MOUSE {
             bindings = <
-&q_to_0  &w_to_0  &e_to_0  &r_to_0  &t_to_0                      &y_to_0   &u_to_0    &i_to_0  &o_to_0    &p_to_0
-&a_to_0  &s_to_0  &d_to_0  &f_to_0  &g_to_0  &trans      &trans  &h_to_0   &j_to_0    &k_to_0  &l_to_0    &minus_to_0
-&z_to_0  &x_to_0  &c_to_0  &v_to_0  &b_to_0  &trans      &trans  &n_to_0   &mkp MB1   &mo 5    &mkp MB2   &slash_to_0
-&trans   &trans   &trans   &trans   &space_to_0   &trans      &trans   &trans                                  &trans
+&q_to_0    &w_to_0       &e_to_0  &r_to_0       &t_to_0                             &y_to_0    &u_to_0    &i_to_0    &o_to_0    &p_to_0
+&a_to_0    &s_to_0       &d_to_0  &f_to_0       &g_to_0       &trans      &trans    &h_to_0    &j_to_0    &k_to_0    &l_to_0    &minus_to_0
+&z_to_0    &x_to_0       &c_to_0  &v_to_0       &b_to_0       &trans      &trans    &n_to_0    &mkp MB1   &mo 5      &mkp MB2   &slash_to_0
+&kp LCTRL  &kp LEFT_WIN  &mo 3    &kp LEFT_ALT  &space_to_0   &mo 2       &mo 3     &mo 1                                       &esc_lang2 
             >;
         };
 
