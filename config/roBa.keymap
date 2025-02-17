@@ -110,8 +110,8 @@
             key-positions = <18 21>;
         };
 
-        qwvb_as_bootloader {
-            bindings = <&bootloader>;
+        qwvb_as_to6 {
+            bindings = <&to 6>;
             key-positions = <0 1 25 26>;
         };
 
