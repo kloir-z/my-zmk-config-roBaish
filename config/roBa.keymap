@@ -25,7 +25,7 @@
         op_as_bs {
             bindings = <&kp BACKSPACE>;
             key-positions = <8 9>;
-            timeout-ms = <25>;
+            timeout-ms = <40>;
         };
 
         pl_as_del {
@@ -150,7 +150,7 @@
             key-positions = <40 41>;
         };
 
-        MB2 {
+        l_center_combo_as_mb2 {
             bindings = <&mkp MB2>;
             key-positions = <15 27>;
         };
