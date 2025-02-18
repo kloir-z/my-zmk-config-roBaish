@@ -10,8 +10,8 @@
 / {
     combos {
         compatible = "zmk,combos";
-        timeout-ms = <30>;
-        global-quick-tap-ms = <200>;
+        timeout-ms = <35>;
+        global-quick-tap-ms = <250>;
 
         as_as_tab {
             bindings = <&kp TAB>;
@@ -113,11 +113,20 @@
             key-positions = <18 21>;
         };
 
+        mcom_to_MB1 {
+            bindings = <&mkp MB1>;
+            key-positions = <30 31>;
+        };
+
         comdot_to_layer5 {
             bindings = <&mo 5>;
             key-positions = <31 32>;
         };
 
+        dotslsh_to_MB2 {
+            bindings = <&mkp MB2>;
+            key-positions = <32 33>;
+        };
 
         qwvb_as_to6 {
             bindings = <&to 6>;
@@ -177,7 +186,7 @@
             bindings = <
 &kp Q      &kp W         &kp E  &kp R         &kp T                            &kp Y  &kp U  &kp I      &kp O    &kp P
 &kp A      &kp S         &kp D  &kp F         &kp G      &none       &mkp MB1  &kp H  &kp J  &kp K      &kp L    &kp MINUS
-&kp Z      &kp X         &kp C  &kp V         &kp B      &trans      &mkp MB2  &kp N  &kp M  &kp COMMA  &kp DOT  &kp SLASH
+&kp Z      &kp X         &kp C  &kp V         &kp B      &mkp MB1    &mkp MB2  &kp N  &kp M  &kp COMMA  &kp DOT  &kp SLASH
 &kp LCTRL  &kp LEFT_WIN  &mo 3  &kp LEFT_ALT  &kp SPACE  &mo 2       &mo 3     &mo 1                             &esc_lang2 
             >;
         };
