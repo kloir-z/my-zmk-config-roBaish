@@ -41,14 +41,12 @@
 
         uo_as_lbrac {
             timeout-ms = <20>;
-            global-quick-tap-ms = <100>;
             bindings = <&kp RIGHT_BRACKET>;
             key-positions = <6 8>;
         };
 
         ip_as_rbrac {
             timeout-ms = <20>;
-            global-quick-tap-ms = <100>;
             bindings = <&kp BACKSLASH>;
             key-positions = <7 9>;
         };
@@ -100,21 +98,18 @@
 
         we_as_capsword {
             timeout-ms = <20>;
-            global-quick-tap-ms = <100>;
             bindings = <&caps_word>;
             key-positions = <1 2>;
         };
 
         io_as_capsword {
             timeout-ms = <20>;
-            global-quick-tap-ms = <100>;
             bindings = <&caps_word>;
             key-positions = <7 8>;
         };
 
         up_as_lrbrac {
             timeout-ms = <20>;
-            global-quick-tap-ms = <100>;
             bindings = <&brac>;
             key-positions = <6 9>;
         };
