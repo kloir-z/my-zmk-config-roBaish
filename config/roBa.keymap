@@ -10,7 +10,7 @@
 / {
     combos {
         compatible = "zmk,combos";
-        timeout-ms = <35>;
+        timeout-ms = <20>;
         global-quick-tap-ms = <250>;
 
         as_as_tab {
