@@ -70,7 +70,7 @@
             bindings = <&kp PIPE>;
             key-positions = <31 33>;
         };
-        
+
         df_as_muhenkan {
             bindings = <&muhenkan_to_default>;
             key-positions = <13 12>;
@@ -143,6 +143,11 @@
             bindings = <&bootloader>;
             key-positions = <5 6 29 30>;
         };
+
+        rthumbs_as_mo3 {
+            bindings = <&mo 3>;
+            key-positions = <40 41>;
+        };
     };
 
     macros {
@@ -166,7 +171,7 @@
             bindings = <&kp ESCAPE &kp LANGUAGE_2 &to 0>;
             label = "ESC_LANG2";
         };
-        
+
         muhenkan_to_default: muhenkan_to_default {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -182,45 +187,42 @@
         };
     };
 
-    behaviors {
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
-&kp Q      &kp W         &kp E  &kp R         &kp T                            &kp Y  &kp U  &kp I      &kp O    &kp P
-&kp A      &kp S         &kp D  &kp F         &kp G      &none       &mkp MB2  &kp H  &kp J  &kp K      &kp L    &kp MINUS
-&kp Z      &kp X         &kp C  &kp V         &kp B      &mkp MB1    &mkp MB1  &kp N  &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LCTRL  &kp LEFT_WIN  &mo 3  &kp LEFT_ALT  &kp SPACE  &mo 2       &mo 3     &mo 1                             &esc_lang2 
+&kp Q      &kp W         &kp E  &kp R         &kp T                              &kp Y  &kp U  &kp I      &kp O    &kp P
+&kp A      &kp S         &kp D  &kp F         &kp G      &none         &mkp MB2  &kp H  &kp J  &kp K      &kp L    &kp MINUS
+&kp Z      &kp X         &kp C  &kp V         &kp B      &mkp MB1      &mkp MB1  &kp N  &kp M  &kp COMMA  &kp DOT  &kp SLASH
+&kp LCTRL  &kp LEFT_WIN  &mo 3  &kp LEFT_ALT  &kp SPACE  &mo 2         &mo 2     &mo 1                             &esc_lang2
             >;
         };
 
         Symbol {
             bindings = <
-&kp EXCLAMATION  &kp AT        &kp HASH      &kp DOLLAR    &kp PERCENT                       &kp CARET  &kp AMPERSAND      &kp UNDER                 &kp EQUAL         &kp 0x89
-&kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5       &none      &none     &kp COLON  &kp PLUS           &kp LS(0x89)              &kp LEFT_BRACKET  &kp SINGLE_QUOTE
-&kp NUMBER_6     &kp N7        &kp N8        &kp N9        &kp N0       &none      &none     &none      &kp DOUBLE_QUOTES  &kp LEFT_BRACE            &kp LS(0x87)      &kp SEMICOLON
-&trans           &trans        &trans        &trans        &trans       &trans     &trans    &trans                                                                    &trans
+&kp EXCLAMATION  &kp AT        &kp HASH      &kp DOLLAR    &kp PERCENT                      &kp CARET  &kp AMPERSAND      &kp UNDER       &kp EQUAL         &kp 0x89
+&kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5       &none       &none   &kp COLON  &kp PLUS           &kp LS(0x89)    &kp LEFT_BRACKET  &kp SINGLE_QUOTE
+&kp NUMBER_6     &kp N7        &kp N8        &kp N9        &kp N0       &none       &none   &none      &kp DOUBLE_QUOTES  &kp LEFT_BRACE  &kp LS(0x87)      &kp SEMICOLON
+&trans           &trans        &trans        &trans        &trans       &trans      &trans  &trans                                                          &trans
             >;
         };
 
         Num_Mouse {
             bindings = <
-&kp COLON     &kp N7        &kp N8        &kp N9        &none                         &kp LC(W)       &kp LA(LEFT)    &kp LA(RIGHT)  &kp LC(PAGE_UP)  &kp LC(PAGE_DOWN)
-&kp NUMBER_0  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp COMMA   &none      &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW   &kp RIGHT_ARROW  &kp PAGE_UP
-&none         &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD  &none      &none  &kp HOME        &mkp MB1        &mo 5          &mkp MB2         &kp PAGE_DOWN
-&trans        &trans        &trans        &trans        &trans      &trans     &trans &trans                                                          &trans
+&kp COLON     &kp N7        &kp N8        &kp N9        &none                           &kp LC(W)       &kp LA(LEFT)    &kp LA(RIGHT)  &kp LC(PAGE_UP)  &kp LC(PAGE_DOWN)
+&kp NUMBER_0  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp COMMA   &none       &none   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW   &kp RIGHT_ARROW  &kp PAGE_UP
+&none         &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD  &none       &none   &kp HOME        &mkp MB1        &mo 5          &mkp MB2         &kp PAGE_DOWN
+&trans        &trans        &trans        &trans        &trans      &trans      &trans  &trans                                                          &trans
             >;
         };
 
         Function {
             bindings = <
-&kp C_MUTE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &none            &none                    &none  &kp F9  &kp F10  &kp F11  &kp F12
-&none       &none              &none            &kp PRINTSCREEN  &none  &none      &none  &none  &kp F5  &kp F6   &kp F7   &kp F8
-&none       &none              &none            &none            &none  &none      &none  &none  &kp F1  &kp F2   &kp F3   &kp F4
-&trans      &trans             &trans           &trans           &trans &trans     &trans &trans                           &trans
+&kp C_MUTE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &none            &none                       &none   &kp F9  &kp F10  &kp F11  &kp F12
+&none       &none              &none            &kp PRINTSCREEN  &none   &none       &none   &none   &kp F5  &kp F6   &kp F7   &kp F8
+&none       &none              &none            &none            &none   &none       &none   &none   &kp F1  &kp F2   &kp F3   &kp F4
+&trans      &trans             &trans           &trans           &trans  &trans      &trans  &trans                            &trans
             >;
         };
 
