@@ -35,6 +35,7 @@
             timeout-ms = <70>;
             bindings = <&kp ENTER>;
             key-positions = <20 21>;
+            require-prior-idle-ms = <1>;
         };
 
         uo_as_lbrac {
