@@ -159,183 +159,6 @@
             bindings = <&to 0 &kp LANGUAGE_1>;
             label = "HENKAN_TO_DEFAULT";
         };
-
-        a_to_0: a_to_0 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp A &to 0>;
-            label = "A_TO_0";
-        };
-        b_to_0: b_to_0 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp B &to 0>;
-            label = "B_TO_0";
-        };
-        c_to_0: c_to_0 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp C &to 0>;
-            label = "C_TO_0";
-        };
-        d_to_0: d_to_0 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp D &to 0>;
-            label = "D_TO_0";
-        };
-        e_to_0: e_to_0 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp E &to 0>;
-            label = "E_TO_0";
-        };
-        f_to_0: f_to_0 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp F &to 0>;
-            label = "F_TO_0";
-        };
-        g_to_0: g_to_0 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp G &to 0>;
-            label = "G_TO_0";
-        };
-        h_to_0: h_to_0 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp H &to 0>;
-            label = "H_TO_0";
-        };
-        i_to_0: i_to_0 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp I &to 0>;
-            label = "I_TO_0";
-        };
-        j_to_0: j_to_0 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp J &to 0>;
-            label = "J_TO_0";
-        };
-        k_to_0: k_to_0 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp K &to 0>;
-            label = "K_TO_0";
-        };
-        l_to_0: l_to_0 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp L &to 0>;
-            label = "L_TO_0";
-        };
-        m_to_0: m_to_0 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp M &to 0>;
-            label = "M_TO_0";
-        };
-        n_to_0: n_to_0 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp N &to 0>;
-            label = "N_TO_0";
-        };
-        o_to_0: o_to_0 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp O &to 0>;
-            label = "O_TO_0";
-        };
-        p_to_0: p_to_0 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp P &to 0>;
-            label = "P_TO_0";
-        };
-        q_to_0: q_to_0 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp Q &to 0>;
-            label = "Q_TO_0";
-        };
-        r_to_0: r_to_0 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp R &to 0>;
-            label = "R_TO_0";
-        };
-        s_to_0: s_to_0 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp S &to 0>;
-            label = "S_TO_0";
-        };
-        t_to_0: t_to_0 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp T &to 0>;
-            label = "T_TO_0";
-        };
-        u_to_0: u_to_0 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp U &to 0>;
-            label = "U_TO_0";
-        };
-        v_to_0: v_to_0 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp V &to 0>;
-            label = "V_TO_0";
-        };
-        w_to_0: w_to_0 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp W &to 0>;
-            label = "W_TO_0";
-        };
-        x_to_0: x_to_0 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp X &to 0>;
-            label = "X_TO_0";
-        };
-        y_to_0: y_to_0 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp Y &to 0>;
-            label = "Y_TO_0";
-        };
-        z_to_0: z_to_0 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp Z &to 0>;
-            label = "Z_TO_0";
-        };
-
-        // Special characters
-        minus_to_0: minus_to_0 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp MINUS &to 0>;
-            label = "MINUS_TO_0";
-        };
-        slash_to_0: slash_to_0 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp SLASH &to 0>;
-            label = "SLASH_TO_0";
-        };
-        space_to_0: space_to_0 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp SPACE &to 0>;
-            label = "SPACE_TO_0";
-        };
     };
 
     behaviors {
@@ -382,19 +205,19 @@
 
         MOUSE {
             bindings = <
-&q_to_0    &w_to_0       &e_to_0  &r_to_0       &t_to_0                             &y_to_0    &u_to_0    &i_to_0    &o_to_0    &p_to_0
-&a_to_0    &s_to_0       &d_to_0  &f_to_0       &g_to_0       &trans      &trans    &h_to_0    &j_to_0    &k_to_0    &l_to_0    &minus_to_0
-&z_to_0    &x_to_0       &c_to_0  &v_to_0       &b_to_0       &trans      &trans    &n_to_0    &mkp MB1   &mo 5      &mkp MB2   &slash_to_0
-&kp LCTRL  &kp LEFT_WIN  &mo 3    &kp LEFT_ALT  &space_to_0   &mo 2       &mo 3     &mo 1                                       &esc_lang2 
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans    &trans  &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &trans  &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1   &mo 5  &mkp MB2  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                              &trans
             >;
         };
 
         SCROLL {
             bindings = <
-&none  &none  &none  &none  &none                    &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none      &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none      &none  &none  &none  &none  &none  &none
-&trans &trans &trans &trans &trans &trans     &trans &trans                      &trans
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
             >;
         };
 
