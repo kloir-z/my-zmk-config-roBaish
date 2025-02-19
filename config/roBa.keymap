@@ -28,19 +28,19 @@
         };
 
         op_as_bs {
-            bindings = <&kp_exit_AML BACKSPACE>;
+            bindings = <&kp BACKSPACE>;
             key-positions = <8 9>;
             timeout-ms = <40>;
         };
 
         pl_as_del {
-            bindings = <&kp_exit_AML DELETE>;
+            bindings = <&kp DELETE>;
             key-positions = <9 20>;
         };
 
         lmin_as_enter {
             timeout-ms = <100>;
-            bindings = <&kp_exit_AML ENTER>;
+            bindings = <&kp ENTER>;
             key-positions = <20 21>;
             require-prior-idle-ms = <1>;
         };
@@ -323,10 +323,10 @@
 
         default_layer {
             bindings = <
-&kp_exit_AML Q      &kp_exit_AML W         &kp_exit_AML E  &kp_exit_AML R         &kp_exit_AML T                                        &kp_exit_AML Y  &kp_exit_AML U  &kp_exit_AML I      &kp_exit_AML O    &kp_exit_AML P
-&kp_exit_AML A      &kp_exit_AML S         &kp_exit_AML D  &kp_exit_AML F         &kp_exit_AML G      &mkp MB1        &mkp MB1          &kp_exit_AML H  &kp_exit_AML J  &kp_exit_AML K      &kp_exit_AML L    &kp_exit_AML MINUS
-&kp_exit_AML Z      &kp_exit_AML X         &kp_exit_AML C  &kp_exit_AML V         &kp_exit_AML B      &mo_exit_AML 5  &mkp MB2          &kp_exit_AML N  &kp_exit_AML M  &kp_exit_AML COMMA  &kp_exit_AML DOT  &kp_exit_AML SLASH
-&kp_exit_AML LCTRL  &kp_exit_AML LEFT_WIN  &mo_exit_AML 3  &kp_exit_AML LEFT_ALT  &kp_exit_AML SPACE  &mo_exit_AML 2  &mo_exit_AML 2    &mo_exit_AML 1                                                        &esc_lang2
+&kp Q      &kp W         &kp E  &kp R         &kp T                            &kp Y  &kp U  &kp I      &kp O    &kp P
+&kp A      &kp S         &kp D  &kp F         &kp G      &mkp MB1   &mkp MB1   &kp H  &kp J  &kp K      &kp L    &kp MINUS
+&kp Z      &kp X         &kp C  &kp V         &kp B      &mo 5      &mkp MB2   &kp N  &kp M  &kp COMMA  &kp DOT  &kp SLASH
+&kp LCTRL  &kp LEFT_WIN  &mo 3  &kp LEFT_ALT  &kp SPACE  &mo 2      &mo 2      &mo 1                             &esc_lang2
             >;
         };
 
@@ -359,10 +359,10 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans    &trans  &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &trans  &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &mo 5   &mkp MB2  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                              &trans
+&kp_exit_AML Q      &kp_exit_AML W         &kp_exit_AML E  &kp_exit_AML R         &kp_exit_AML T                                        &kp_exit_AML Y  &kp_exit_AML U    &kp_exit_AML I      &kp_exit_AML O    &kp_exit_AML P
+&kp_exit_AML A      &kp_exit_AML S         &kp_exit_AML D  &kp_exit_AML F         &kp_exit_AML G      &mkp MB1        &mkp MB1          &kp_exit_AML H  &kp_exit_AML J    &kp_exit_AML K      &kp_exit_AML L    &kp_exit_AML MINUS
+&kp_exit_AML Z      &kp_exit_AML X         &kp_exit_AML C  &kp_exit_AML V         &kp_exit_AML B      &mo_exit_AML 5  &mkp MB2          &kp_exit_AML N  &mkp MB1          &mo 5               &mkp MB2          &kp_exit_AML SLASH
+&kp LCTRL           &kp LEFT_WIN           &mo_exit_AML 3  &kp LEFT_ALT           &kp_exit_AML SPACE  &mo_exit_AML 2  &mo_exit_AML 2    &mo_exit_AML 1                                                          &esc_lang2
             >;
         };
 
