@@ -34,7 +34,7 @@
         };
 
         lmin_as_enter {
-            timeout-ms = <70>;
+            timeout-ms = <100>;
             bindings = <&kp ENTER>;
             key-positions = <20 21>;
             require-prior-idle-ms = <1>;
@@ -191,6 +191,17 @@
             bindings = <&to 0 &kp LANGUAGE_1>;
             label = "HENKAN_TO_DEFAULT";
         };
+
+        uppercase_next: uppercase_next {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LSHIFT>
+                , <&macro_pause_for_release>
+                , <&macro_release &kp LSHIFT>
+                ;
+        };
+
     };
 
     keymap {
