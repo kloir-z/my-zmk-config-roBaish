@@ -7,6 +7,11 @@
 #define SCROLL 5
 #define NUM 6
 
+&sk {
+    release-after-ms = <1000>;
+    quick-release;
+};
+
 / {
     combos {
         compatible = "zmk,combos";
@@ -155,17 +160,17 @@
             key-positions = <15 27>;
         };
 
-        li_as_sk_shift {
+        jkl_as_sk_shift {
             bindings = <&sk LEFT_SHIFT>;
-            key-positions = <20 7>;
-            timeout-ms = <10>;
+            key-positions = <18 19 20>;
+            timeout-ms = <20>;
             require-prior-idle-ms = <100>;
         };
 
-        se_as_sk_shift {
+        sdf_as_sk_shift {
             bindings = <&sk LEFT_SHIFT>;
-            key-positions = <11 2>;
-            timeout-ms = <10>;
+            key-positions = <11 12 13>;
+            timeout-ms = <20>;
             require-prior-idle-ms = <100>;
         };
     };
@@ -205,11 +210,6 @@
             bindings = <&to 0 &kp LANGUAGE_1>;
             label = "HENKAN_TO_DEFAULT";
         };
-    };
-
-    &sk {
-        release-after-ms = <1000>;
-        quick-release;
     };
 
     keymap {
