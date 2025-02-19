@@ -155,6 +155,9 @@
             key-positions = <15 27>;
         };
 
+        li_as_sk_shift {
+            bindings = <&sk LEFT_SHIFT>;
+            key-positions = <20 7>;
         li_as_uppernext {
             bindings = <&uppercase_next>;
             key-positions = <7 20>;
@@ -162,8 +165,8 @@
             require-prior-idle-ms = <100>;
         };
 
-        se_as_uppernext {
-            bindings = <&uppercase_next>;
+        se_as_sk_shift {
+            bindings = <&sk LEFT_SHIFT>;
             key-positions = <11 2>;
             timeout-ms = <10>;
             require-prior-idle-ms = <100>;
@@ -204,17 +207,6 @@
             #binding-cells = <0>;
             bindings = <&to 0 &kp LANGUAGE_1>;
             label = "HENKAN_TO_DEFAULT";
-        };
-
-        uppercase_next: uppercase_next {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings =
-            <&macro_press &kp LEFT_SHIFT>,
-            <&macro_pause_for_release>,
-            <&macro_release &kp LEFT_SHIFT>;
-
-        label = "UPPERCASE_NEXT";
         };
     };
 
