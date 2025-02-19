@@ -158,9 +158,6 @@
         li_as_sk_shift {
             bindings = <&sk LEFT_SHIFT>;
             key-positions = <20 7>;
-        li_as_uppernext {
-            bindings = <&uppercase_next>;
-            key-positions = <7 20>;
             timeout-ms = <10>;
             require-prior-idle-ms = <100>;
         };
