@@ -154,6 +154,18 @@
             bindings = <&mkp MB2>;
             key-positions = <15 27>;
         };
+
+        li_as_uppernext {
+            bindings = <&uppercase_next>;
+            key-positions = <7 20>;
+            timeout-ms = <20>;
+        };
+
+        se_as_uppernext {
+            bindings = <&uppercase_next>;
+            key-positions = <11 2>;
+            timeout-ms = <20>;
+        };
     };
 
     macros {
@@ -195,13 +207,13 @@
         uppercase_next: uppercase_next {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LSHIFT>
-                , <&macro_pause_for_release>
-                , <&macro_release &kp LSHIFT>
-                ;
+            bindings =
+                <&macro_press>,
+                <&kp LSHIFT>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&kp LSHIFT>;
         };
-
     };
 
     keymap {
