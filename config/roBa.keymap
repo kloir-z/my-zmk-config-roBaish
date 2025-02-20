@@ -173,6 +173,11 @@
             timeout-ms = <20>;
             require-prior-idle-ms = <100>;
         };
+
+        space_enter {
+            bindings = <&kp ENTER>;
+            key-positions = <38 21 20>;
+        };
     };
 
     macros {
@@ -195,6 +200,13 @@
             #binding-cells = <0>;
             bindings = <&kp ESCAPE &kp LANGUAGE_2 &to 0>;
             label = "ESC_LANG2";
+        };
+
+        space_enter: space_enter {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE &kp ENTER>;
+            label = "SPACE_ENTER";
         };
 
         muhenkan_to_default: muhenkan_to_default {
