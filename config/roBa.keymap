@@ -39,22 +39,22 @@
         };
 
         lmin_as_enter {
-            timeout-ms = <100>;
             bindings = <&kp ENTER>;
             key-positions = <20 21>;
+            timeout-ms = <100>;
             require-prior-idle-ms = <1>;
         };
 
         uo_as_lbrac {
-            timeout-ms = <20>;
             bindings = <&kp_exit_AML RIGHT_BRACKET>;
             key-positions = <6 8>;
+            timeout-ms = <20>;
         };
 
         ip_as_rbrac {
-            timeout-ms = <20>;
             bindings = <&kp_exit_AML BACKSLASH>;
             key-positions = <7 9>;
+            timeout-ms = <20>;
         };
 
         jl_as_lparen {
@@ -78,9 +78,9 @@
         };
 
         up_as_brackets {
-            timeout-ms = <20>;
             bindings = <&brackets>;
             key-positions = <6 9>;
+            timeout-ms = <20>;
         };
 
         jmin_as_parentheses  {
@@ -114,15 +114,15 @@
         };
 
         we_as_capsword {
-            timeout-ms = <20>;
             bindings = <&caps_word>;
             key-positions = <1 2>;
+            timeout-ms = <20>;
         };
 
         io_as_capsword {
-            timeout-ms = <20>;
             bindings = <&caps_word>;
             key-positions = <7 8>;
+            timeout-ms = <20>;
         };
 
         mcom_to_MB1 {
@@ -326,7 +326,6 @@
 
     keymap {
         compatible = "zmk,keymap";
-
         default_layer {
             bindings = <
 &kp Q      &kp W         &kp E  &kp R         &kp T                               &kp Y  &kp U  &kp I      &kp O    &kp P
@@ -347,9 +346,9 @@
 
         Func_Navi {
             bindings = <
-&kp F1        &kp F2        &kp F3        &kp F4        &none                           &kp LC(W)       &kp LA(LEFT)    &kp LA(RIGHT)  &kp LC(PAGE_UP)  &kp LC(PAGE_DOWN)
-&kp F5        &kp F6        &kp F7        &kp F8        &none       &none       &none   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW   &kp RIGHT_ARROW  &kp PAGE_UP
-&kp F9        &kp F10       &kp F11       &kp F12       &none       &none       &none   &kp HOME        &none           &none          &none            &kp PAGE_DOWN
+&kp F1        &kp F2        &kp F3        &kp F4        &kp F5                          &kp LC(W)       &kp LA(LEFT)    &kp LA(RIGHT)  &kp LC(PAGE_UP)  &kp LC(PAGE_DOWN)
+&kp F6        &kp F7        &kp F8        &kp F9        &kp F10     &none       &none   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW   &kp RIGHT_ARROW  &kp PAGE_UP
+&kp F11       &kp F12       &none         &none         &none       &kp HOME    &none   &none           &none           &kp PAGE_DOWN
 &trans        &trans        &trans        &trans        &trans      &trans      &trans  &trans                                                          &trans
             >;
         };
@@ -389,6 +388,5 @@
 &none  &none         &none         &none         &none  &none      &none        &none                                                   &bt BT_CLR_ALL
             >;
         };
-
     };
 };
