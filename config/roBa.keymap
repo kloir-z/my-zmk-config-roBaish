@@ -181,7 +181,7 @@
     };
 
     macros {
-        parentheses : parentheses  {
+        parentheses: parentheses  {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp ASTRK &kp LEFT_PARENTHESIS &kp_exit_AML LEFT>;
