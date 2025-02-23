@@ -125,34 +125,14 @@
             timeout-ms = <20>;
         };
 
-        mcom_to_MB1 {
-            bindings = <&mkp MB1>;
-            key-positions = <30 31>;
-        };
-
-        comdot_to_layer5 {
-            bindings = <&mo 5>;
-            key-positions = <31 32>;
-        };
-
-        dotslsh_to_MB2 {
-            bindings = <&mkp MB2>;
-            key-positions = <32 33>;
-        };
-
-        qwvb_as_to6 {
-            bindings = <&to 6>;
-            key-positions = <0 1 25 26>;
+        qwb_as_to6 {
+            bindings = <&mo 6>;
+            key-positions = <0 1 26>;
         };
 
         yunm_as_bootloader {
             bindings = <&bootloader>;
             key-positions = <5 6 29 30>;
-        };
-
-        rthumbs_as_mo3 {
-            bindings = <&mo 3>;
-            key-positions = <40 41>;
         };
 
         l_center_combo_as_mb2 {
