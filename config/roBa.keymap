@@ -140,9 +140,9 @@
             key-positions = <32 33>;
         };
 
-        qwvb_as_to6 {
-            bindings = <&to 6>;
-            key-positions = <0 1 25 26>;
+        qwb_as_mo6 {
+            bindings = <&mo 6>;
+            key-positions = <0 1 26>;
         };
 
         yunm_as_bootloader {
