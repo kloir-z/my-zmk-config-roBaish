@@ -178,7 +178,7 @@
         esc_lang2: esc_lang2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp ESCAPE &kp_exit_AML LANGUAGE_2>;
+            bindings = <&kp ESCAPE &kp LANGUAGE_2>;
             label = "ESC_LANG2";
         };
 
