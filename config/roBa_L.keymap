@@ -3,29 +3,31 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
-// 日本語キーボード設定用の定義
-#define JP_DQUOTE       AT                // " = AT
-#define JP_AMPERSAND    CARET             // & = CARET
-#define JP_QUOTE        AMPERSAND         // ' = AMPERSAND
-#define JP_EQUAL        UNDER             // = = UNDER
-#define JP_CARET        EQUAL             // ^ = EQUAL
-#define JP_YEN          0x89              // \ = 0x89 (特殊キーコード)
-#define JP_PLUS         COLON             // + = COLON
-#define JP_TILDE        PLUS              // ~ = PLUS
-#define JP_PIPE         LS(0x89)          // | = Shift + 0x89
-#define JP_AT           LEFT_BRACKET      // @ = LEFT_BRACKET
-#define JP_COLON        SINGLE_QUOTE      // : = SINGLE_QUOTE
-#define JP_ASTERISK     DOUBLE_QUOTES     // * = DOUBLE_QUOTES
-#define JP_GRAVE        LEFT_BRACE        // ` = LEFT_BRACE
-#define JP_UNDERSCORE   LS(0x87)          // _ = Shift + 0x87
-#define JP_SEMICOLON    SEMICOLON         // ; = SEMICOLON
-
-#define JP_LBRACKET     RIGHT_BRACKET     // [ = RIGHT_BRACKET
-#define JP_RBRACKET     BACKSLASH         // ] = BACKSLASH
-#define JP_LPAREN       ASTERISK          // ( = ASTERISK
-#define JP_RPAREN       LEFT_PARENTHESIS  // ) = LEFT_PARENTHESIS
-#define JP_LBRACE       RIGHT_BRACE       // { = RIGHT_BRACE
-#define JP_RBRACE       PIPE              // } = PIPE
+// OS設定を日本語キーボードのまま使用するための変換定義
+#define JP_DQUOTE       AT
+#define JP_AMPERSAND    CARET
+#define JP_QUOTE        AMPERSAND
+#define JP_EQUAL        UNDER
+#define JP_CARET        EQUAL
+#define JP_YEN          0x89
+#define JP_PLUS         COLON
+#define JP_TILDE        PLUS
+#define JP_PIPE         LS(0x89)
+#define JP_AT           LEFT_BRACKET
+#define JP_COLON        SINGLE_QUOTE
+#define JP_ASTERISK     DOUBLE_QUOTES
+#define JP_BACKQUOTE    LEFT_BRACE
+#define JP_UNDERSCORE   LS(0x87)
+#define JP_SEMICOLON    SEMICOLON
+#define JP_LBRACKET     RIGHT_BRACKET
+#define JP_RBRACKET     BACKSLASH
+#define JP_LPAREN       ASTERISK
+#define JP_RPAREN       LEFT_PARENTHESIS
+#define JP_LBRACE       RIGHT_BRACE
+#define JP_RBRACE       PIPE
+#define JP_HENKAN       LANGUAGE_1 
+#define JP_MUHENKAN     LANGUAGE_2 
+//
 
 #define MOUSE 4
 #define SCROLL 5
@@ -67,34 +69,34 @@
         };
 
         uo_as_lbrac {
-            bindings = <&kp_exit_AML JP_LBRACKET>; // [ = RIGHT_BRACKET
+            bindings = <&kp_exit_AML JP_LBRACKET>;
             key-positions = <6 8>;
             timeout-ms = <20>;
         };
 
         ip_as_rbrac {
-            bindings = <&kp_exit_AML JP_RBRACKET>; // ] = BACKSLASH
+            bindings = <&kp_exit_AML JP_RBRACKET>;
             key-positions = <7 9>;
             timeout-ms = <20>;
         };
 
         jl_as_lparen {
-            bindings = <&kp_exit_AML JP_LPAREN>; // ( = ASTERISK
+            bindings = <&kp_exit_AML JP_LPAREN>;
             key-positions = <18 20>;
         };
 
         kmin_as_rparen {
-            bindings = <&kp_exit_AML JP_RPAREN>; // ) = LEFT_PARENTHESIS
+            bindings = <&kp_exit_AML JP_RPAREN>;
             key-positions = <19 21>;
         };
 
         mdot_as_lbrace {
-            bindings = <&kp_exit_AML JP_LBRACE>; // { = RIGHT_BRACE
+            bindings = <&kp_exit_AML JP_LBRACE>;
             key-positions = <30 32>;
         };
 
         comslash_as_rbrace {
-            bindings = <&kp_exit_AML JP_RBRACE>; // } = PIPE
+            bindings = <&kp_exit_AML JP_RBRACE>;
             key-positions = <31 33>;
         };
 
@@ -110,12 +112,12 @@
         };
 
         df_as_muhenkan {
-            bindings = <&muhenkan_exit_AML>;
+            bindings = <&kp_exit_AML JP_MUHENKAN>;
             key-positions = <13 12>;
         };
 
         jk_as_henkan {
-            bindings = <&henkan_exit_AML>;
+            bindings = <&kp_exit_AML JP_HENKAN>;
             key-positions = <19 18>;
         };
 
@@ -135,13 +137,13 @@
         };
 
         we_as_capsword {
-            bindings = <&caps_word>;
+            bindings = <&caps_word_exit_AML>;
             key-positions = <1 2>;
             timeout-ms = <20>;
         };
 
         io_as_capsword {
-            bindings = <&caps_word>;
+            bindings = <&caps_word_exit_AML>;
             key-positions = <7 8>;
             timeout-ms = <20>;
         };
@@ -167,18 +169,13 @@
         };
 
         kdot_as_sk_shift {
-            bindings = <&sk LEFT_SHIFT>;
+            bindings = <&sk_shift_exit_AML>;
             key-positions = <19 32>;
         };
 
         xd_as_sk_shift {
-            bindings = <&sk LEFT_SHIFT>;
+            bindings = <&sk_shift_exit_AML>;
             key-positions = <12 23>;
-        };
-
-        space_enter {
-            bindings = <&kp ENTER>;
-            key-positions = <38 19 20>;
         };
     };
 
@@ -186,43 +183,36 @@
         parentheses: parentheses {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp JP_LPAREN &kp JP_RPAREN &kp_exit_AML LEFT>; // "(*)" と入力し、カーソルを戻す
+            bindings = <&kp JP_LPAREN &kp JP_RPAREN &kp_exit_AML LEFT>;
             label = "PARENTHESES";
         };
 
         brackets: brackets {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp JP_LBRACKET &kp JP_RBRACKET &kp_exit_AML LEFT>; // "[]" と入力し、カーソルを戻す
+            bindings = <&kp JP_LBRACKET &kp JP_RBRACKET &kp_exit_AML LEFT>;
             label = "BRACKETS";
         };
 
         esc_lang2: esc_lang2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp ESCAPE &kp LANGUAGE_2>;
+            bindings = <&kp ESCAPE &kp JP_MUHENKAN>;
             label = "ESC_LANG2";
         };
 
-        space_enter: space_enter {
+        caps_word_exit_AML: caps_word_exit_AML {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp SPACE &kp ENTER>;
-            label = "SPACE_ENTER";
+            bindings = <&exit_AML &caps_word>;
+            label = "caps_word_exit_AML";
         };
 
-        muhenkan_exit_AML: muhenkan_exit_AML {
+        sk_shift_exit_AML: sk_shift_exit_AML {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp_exit_AML LANGUAGE_2>;
-            label = "MUHENKAN_EXIT_AML";
-        };
-
-        henkan_exit_AML: henkan_exit_AML {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp_exit_AML LANGUAGE_1>;
-            label = "HENKAN_EXIT_AML";
+            bindings = <&exit_AML &sk LEFT_SHIFT>;
+            label = "SK_SHIFT_EXIT_AML";
         };
 
         exit_AML: exit_AML {
@@ -241,22 +231,6 @@
             #binding-cells = <1>;
             bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &exit_AML>;
             label = "KP_exit_AML";
-        };
-
-        mod_exit_AML: mod_exit_AML {
-            compatible = "zmk,behavior-macro-one-param";
-            wait-ms = <0>;
-            tap-ms = <0>;
-            #binding-cells = <1>;
-            bindings =
-                <&macro_press>,
-                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
-                <&macro_tap>,
-                <&exit_AML>,
-                <&macro_pause_for_release>,
-                <&macro_release>,
-                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
-            label = "MOD_exit_AML";
         };
 
         mo_exit_AML: mo_exit_AML {
@@ -284,6 +258,23 @@
             wait-ms = <40>;
             tap-ms = <40>;
         };
+
+        // Commented out as currently unused, but may be used in the future 
+        // mod_exit_AML: mod_exit_AML {
+        //     compatible = "zmk,behavior-macro-one-param";
+        //     wait-ms = <0>;
+        //     tap-ms = <0>;
+        //     #binding-cells = <1>;
+        //     bindings =
+        //         <&macro_press>,
+        //         <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
+        //         <&macro_tap>,
+        //         <&exit_AML>,
+        //         <&macro_pause_for_release>,
+        //         <&macro_release>,
+        //         <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+        //     label = "MOD_exit_AML";
+        // };
     };
 
     behaviors {
@@ -294,45 +285,46 @@
             toggle-mode = "off";
         };
 
-        lt_exit_AML: lt_exit_AML {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LT_exit_AML";
-            bindings = <&mo_exit_AML>, <&kp_exit_AML>;
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
-            flavor = "balanced";
-        };
+        // Commented out as currently unused, but may be used in the future 
+        // lt_exit_AML: lt_exit_AML {
+        //     compatible = "zmk,behavior-hold-tap";
+        //     label = "LT_exit_AML";
+        //     bindings = <&mo_exit_AML>, <&kp_exit_AML>;
+        //     #binding-cells = <2>;
+        //     tapping-term-ms = <200>;
+        //     quick-tap-ms = <200>;
+        //     flavor = "balanced";
+        // };
 
-        lt_exit_AML_on_hold: lt_exit_AML_on_hold {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LT_exit_AML_ON_HOLD";
-            bindings = <&mo_exit_AML>, <&kp>;
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
-            flavor = "balanced";
-        };
+        // lt_exit_AML_on_hold: lt_exit_AML_on_hold {
+        //     compatible = "zmk,behavior-hold-tap";
+        //     label = "LT_exit_AML_ON_HOLD";
+        //     bindings = <&mo_exit_AML>, <&kp>;
+        //     #binding-cells = <2>;
+        //     tapping-term-ms = <200>;
+        //     quick-tap-ms = <200>;
+        //     flavor = "balanced";
+        // };
 
-        mt_exit_AML: mt_exit_AML {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MT_exit_AML";
-            bindings = <&mod_exit_AML>, <&kp_exit_AML>;
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "balanced";
-            quick-tap-ms = <200>;
-        };
+        // mt_exit_AML: mt_exit_AML {
+        //     compatible = "zmk,behavior-hold-tap";
+        //     label = "MT_exit_AML";
+        //     bindings = <&mod_exit_AML>, <&kp_exit_AML>;
+        //     #binding-cells = <2>;
+        //     tapping-term-ms = <200>;
+        //     flavor = "balanced";
+        //     quick-tap-ms = <200>;
+        // };
 
-        mt_exit_AML_on_tap: mt_exit_AML_on_tap {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MT_exit_AML_ON_TAP";
-            bindings = <&kp>, <&kp_exit_AML>;
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "balanced";
-            quick-tap-ms = <200>;
-        };
+        // mt_exit_AML_on_tap: mt_exit_AML_on_tap {
+        //     compatible = "zmk,behavior-hold-tap";
+        //     label = "MT_exit_AML_ON_TAP";
+        //     bindings = <&kp>, <&kp_exit_AML>;
+        //     #binding-cells = <2>;
+        //     tapping-term-ms = <200>;
+        //     flavor = "balanced";
+        //     quick-tap-ms = <200>;
+        // };
     };
 
     keymap {
@@ -350,7 +342,7 @@
             bindings = <
 &kp EXCLAMATION    &kp JP_DQUOTE    &kp HASH         &kp DOLLAR      &kp PERCENT                         &kp JP_AMPERSAND  &kp JP_QUOTE       &kp JP_EQUAL     &kp JP_CARET      &kp JP_YEN
 &kp NUMBER_1       &kp NUMBER_2     &kp NUMBER_3     &kp NUMBER_4    &kp NUMBER_5    &trans      &trans  &kp JP_PLUS       &kp JP_TILDE       &kp JP_PIPE      &kp JP_AT         &kp JP_COLON
-&kp NUMBER_6       &kp NUMBER_7     &kp NUMBER_8     &kp NUMBER_9    &kp NUMBER_0    &trans      &trans  &none             &kp JP_ASTERISK    &kp JP_GRAVE     &kp JP_UNDERSCORE &kp JP_SEMICOLON
+&kp NUMBER_6       &kp NUMBER_7     &kp NUMBER_8     &kp NUMBER_9    &kp NUMBER_0    &trans      &trans  &none             &kp JP_ASTERISK    &kp JP_BACKQUOTE &kp JP_UNDERSCORE &kp JP_SEMICOLON
 &trans             &trans           &trans           &trans          &trans          &trans      &trans  &trans                                                                  &trans
             >;
         };
@@ -376,8 +368,8 @@
         MOUSE {
             bindings = <
 &kp_exit_AML Q      &kp_exit_AML W         &kp_exit_AML E  &kp_exit_AML R         &kp_exit_AML T                                        &kp_exit_AML Y  &kp_exit_AML U    &mkp MB1            &mo 5             &mkp MB2
-&kp_exit_AML A      &kp_exit_AML S         &kp_exit_AML D  &kp_exit_AML F         &kp_exit_AML G      &mkp MB1        &kp PAGE_UP       &kp_exit_AML H  &kp_exit_AML J    &mkp MB1            &kp_exit_AML L    &kp_exit_AML MINUS
-&kp_exit_AML Z      &kp_exit_AML X         &kp_exit_AML C  &kp_exit_AML V         &kp_exit_AML B      &mo_exit_AML 5  &kp PAGE_DOWN     &kp_exit_AML N  &kp_exit_AML M    &kp_exit_AML COMMA  &kp_exit_AML DOT  &kp_exit_AML SLASH
+&kp_exit_AML A      &kp_exit_AML S         &kp_exit_AML D  &kp_exit_AML F         &kp_exit_AML G      &trans          &trans            &kp_exit_AML H  &kp_exit_AML J    &mkp MB1            &kp_exit_AML L    &kp_exit_AML MINUS
+&kp_exit_AML Z      &kp_exit_AML X         &kp_exit_AML C  &kp_exit_AML V         &kp_exit_AML B      &trans          &trans            &kp_exit_AML N  &kp_exit_AML M    &kp_exit_AML COMMA  &kp_exit_AML DOT  &kp_exit_AML SLASH
 &kp LCTRL           &kp LEFT_WIN           &mo_exit_AML 3  &kp LEFT_ALT           &kp_exit_AML SPACE  &mo_exit_AML 2  &mo_exit_AML 2    &mo_exit_AML 1                                                          &mo_exit_AML 2
             >;
         };
