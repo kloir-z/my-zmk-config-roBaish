@@ -105,9 +105,9 @@
             key-positions = <20 19>;
         };
 
-        qwe_as_alt_f4 {
+        qwt_as_alt_f4 {
             bindings = <&kp LA(F4)>;
-            key-positions = <0 2 1>;
+            key-positions = <0 1 4>;
         };
 
         we_as_capsword {
@@ -257,8 +257,8 @@
             #binding-cells = <0>;
             bindings = <&kp LA(A) &kp LC(LS(M))>;
             label = "TOGGLE_MUTE";
-            wait-ms = <75>;
-            tap-ms = <75>;
+            wait-ms = <40>;
+            tap-ms = <40>;
         };
     };
 
@@ -335,17 +335,17 @@
             bindings = <
 &kp F1        &kp F2        &kp F3        &kp F4        &kp F5                          &kp LC(W)       &kp LA(LEFT)    &kp LA(RIGHT)  &kp LC(PAGE_UP)  &kp LC(PAGE_DOWN)
 &kp F6        &kp F7        &kp F8        &kp F9        &kp F10     &trans      &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW   &kp RIGHT_ARROW  &kp PAGE_UP
-&kp F11       &kp F12       &none         &none         &none       &trans      &trans  &kp HOME        &trans          &none           &none           &kp PAGE_DOWN
+&kp F11       &kp F12       &none         &none         &none       &trans      &trans  &kp HOME        &kp LC(END)     &kp LC(HOME)   &kp END          &kp PAGE_DOWN
 &trans        &trans        &trans        &trans        &trans      &trans      &trans  &trans                                                          &trans
             >;
         };
 
         Other {
             bindings = <
-&kp C_MUTE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &none            &none                       &none    &kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3  &kp SINGLE_QUOTE 
-&none       &none              &toggle_mute     &kp PRINTSCREEN  &none   &trans      &trans  &none    &kp NUMBER_4     &kp NUMBER_5  &kp NUMBER_6  &kp NUMBER_0 
-&none       &none              &none            &none            &none   &trans      &trans  &none    &kp NUMBER_7     &kp NUMBER_8  &kp NUMBER_9  &none 
-&trans      &trans             &trans           &trans           &trans  &trans      &trans  &trans                            &trans
+&kp C_MUTE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &none            &none                       &none    &none     &none     &none     &none 
+&none       &none              &toggle_mute     &kp PRINTSCREEN  &none   &trans      &trans  &none    &none     &none     &none     &none 
+&none       &none              &none            &none            &none   &trans      &trans  &none    &none     &none     &none     &none 
+&trans      &trans             &trans           &trans           &trans  &trans      &trans  &trans                                 &trans
             >;
         };
 
