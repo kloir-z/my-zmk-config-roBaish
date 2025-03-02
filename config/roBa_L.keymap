@@ -255,8 +255,8 @@
             #binding-cells = <0>;
             bindings = <&kp LA(A) &kp LC(LS(M))>;
             label = "TOGGLE_MUTE";
-            wait-ms = <40>;
-            tap-ms = <40>;
+            wait-ms = <30>;
+            tap-ms = <30>;
         };
 
         // Commented out as currently unused, but may be used in the future 
