@@ -25,8 +25,8 @@
 #define JP_RPAREN       LEFT_PARENTHESIS
 #define JP_LBRACE       RIGHT_BRACE
 #define JP_RBRACE       PIPE
-#define JP_HENKAN       LANGUAGE_1 
-#define JP_MUHENKAN     LANGUAGE_2 
+#define JP_KANA         LANGUAGE_1 
+#define JP_EISU         LANGUAGE_2 
 //
 
 #define MOUSE 4
@@ -47,8 +47,8 @@
             key-positions = <10 11>;
         };
 
-        qw_as_esc_lang2 {
-            bindings = <&esc_lang2>;
+        qw_as_esc_eisu {
+            bindings = <&esc_eisu>;
             key-positions = <0 1>;
         };
 
@@ -111,13 +111,13 @@
             key-positions = <18 21>;
         };
 
-        df_as_muhenkan {
-            bindings = <&kp_exit_AML JP_MUHENKAN>;
+        df_as_eisu {
+            bindings = <&kp_exit_AML JP_EISU>;
             key-positions = <13 12>;
         };
 
-        jk_as_henkan {
-            bindings = <&kp_exit_AML JP_HENKAN>;
+        jk_as_kana {
+            bindings = <&kp_exit_AML JP_KANA>;
             key-positions = <19 18>;
         };
 
@@ -194,11 +194,11 @@
             label = "BRACKETS";
         };
 
-        esc_lang2: esc_lang2 {
+        esc_eisu: esc_eisu {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp ESCAPE &kp JP_MUHENKAN>;
-            label = "ESC_LANG2";
+            bindings = <&kp ESCAPE &kp JP_EISU>;
+            label = "ESC_EISU";
         };
 
         caps_word_exit_AML: caps_word_exit_AML {
