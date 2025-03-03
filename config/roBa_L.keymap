@@ -130,6 +130,7 @@
         kl_as_enter {
             bindings = <&kp ENTER>;
             key-positions = <20 19>;
+            timeout-ms = <150>;
         };
 
         qwt_as_alt_f4 {
