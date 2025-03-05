@@ -1,12 +1,12 @@
 manifest:
   remotes:
-    - name: zmkfirmware
-      url-base: https://github.com/zmkfirmware
+    # - name: zmkfirmware
+    #   url-base: https://github.com/zmkfirmware
     - name: kloir-z
       url-base: https://github.com/kloir-z
   projects:
     - name: zmk
-      remote: zmkfirmware
+      remote: kloir-z
       revision: main
       import: app/west.yml
     - name: zmk-pmw3610-driver

@@ -179,6 +179,26 @@
             bindings = <&sk_shift_exit_AML>;
             key-positions = <12 23>;
         };
+
+        zx_as_ctrl_z {
+            bindings = <&kp LC(Z)>;
+            key-positions = <22 23>;
+        };
+
+        xc_as_ctrl_x {
+            bindings = <&kp LC(X)>;
+            key-positions = <23 24>;
+        };
+
+        cv_as_ctrl_c {
+            bindings = <&kp LC(C)>;
+            key-positions = <24 25>;
+        };
+
+        vb_as_ctrl_v {
+            bindings = <&kp LC(V)>;
+            key-positions = <25 26>;
+        };
     };
 
     macros {
