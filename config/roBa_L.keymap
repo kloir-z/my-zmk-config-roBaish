@@ -46,6 +46,7 @@
         as_as_shift {
             bindings = <&kp LEFT_SHIFT>;
             key-positions = <10 11>;
+            timeout-ms = <15>;
         };
 
         qw_as_esc_eisu {
