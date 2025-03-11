@@ -30,8 +30,8 @@
 #define JP_HANZEN       GRAVE 
 //
 
-// #define MOUSE 4
-// #define SCROLL 5
+#define MOUSE 4
+#define SCROLL 5
 
 &sk {
     release-after-ms = <1000>;
