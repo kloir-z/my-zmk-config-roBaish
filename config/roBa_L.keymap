@@ -43,6 +43,7 @@
 / {
     combos {
         compatible = "zmk,combos";
+        timeout-ms = <15>;
 
         qw_as_esc_eisu {
             bindings = <&esc_eisu>;
@@ -52,7 +53,6 @@
         op_as_bs {
             bindings = <&kp BACKSPACE>;
             key-positions = <8 9>;
-            timeout-ms = <40>;
         };
 
         pl_as_del {
@@ -63,13 +63,11 @@
         uo_as_lbrac {
             bindings = <&kp_exit_AML JP_LBRACKET>;
             key-positions = <6 8>;
-            timeout-ms = <20>;
         };
 
         ip_as_rbrac {
             bindings = <&kp_exit_AML JP_RBRACKET>;
             key-positions = <7 9>;
-            timeout-ms = <20>;
         };
 
         jl_as_lparen {
@@ -95,7 +93,6 @@
         up_as_brackets {
             bindings = <&brackets>;
             key-positions = <6 9>;
-            timeout-ms = <20>;
         };
 
         jmin_as_parentheses  {
@@ -121,7 +118,6 @@
         kl_as_enter {
             bindings = <&kp ENTER>;
             key-positions = <20 19>;
-            timeout-ms = <20>;
         };
 
         qwt_as_alt_f4 {
@@ -132,13 +128,11 @@
         we_as_capsword {
             bindings = <&caps_word_exit_AML>;
             key-positions = <1 2>;
-            timeout-ms = <20>;
         };
 
         io_as_capsword {
             bindings = <&caps_word_exit_AML>;
             key-positions = <7 8>;
-            timeout-ms = <20>;
         };
 
         qwb_as_mo6 {
