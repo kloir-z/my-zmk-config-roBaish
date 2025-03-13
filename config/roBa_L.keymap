@@ -43,146 +43,173 @@
 / {
     combos {
         compatible = "zmk,combos";
-        timeout-ms = <15>;
 
         qw_as_esc_eisu {
             bindings = <&esc_eisu>;
             key-positions = <0 1>;
+            timeout-ms = <15>;
         };
 
         op_as_bs {
             bindings = <&kp BACKSPACE>;
             key-positions = <8 9>;
+            timeout-ms = <15>;
         };
 
         pl_as_del {
             bindings = <&kp DELETE>;
             key-positions = <9 20>;
+            timeout-ms = <15>;
         };
 
         uo_as_lbrac {
             bindings = <&kp_exit_AML JP_LBRACKET>;
             key-positions = <6 8>;
+            timeout-ms = <15>;
         };
 
         ip_as_rbrac {
             bindings = <&kp_exit_AML JP_RBRACKET>;
             key-positions = <7 9>;
+            timeout-ms = <15>;
         };
 
         jl_as_lparen {
             bindings = <&kp_exit_AML JP_LPAREN>;
             key-positions = <18 20>;
+            timeout-ms = <15>;
         };
 
         kmin_as_rparen {
             bindings = <&kp_exit_AML JP_RPAREN>;
             key-positions = <19 21>;
+            timeout-ms = <15>;
         };
 
         mdot_as_lbrace {
             bindings = <&kp_exit_AML JP_LBRACE>;
             key-positions = <30 32>;
+            timeout-ms = <15>;
         };
 
         comslash_as_rbrace {
             bindings = <&kp_exit_AML JP_RBRACE>;
             key-positions = <31 33>;
+            timeout-ms = <15>;
         };
 
         up_as_brackets {
             bindings = <&brackets>;
             key-positions = <6 9>;
+            timeout-ms = <15>;
         };
 
         jmin_as_parentheses  {
             bindings = <&parentheses>;
             key-positions = <18 21>;
+            timeout-ms = <15>;
         };
 
         df_as_eisu {
             bindings = <&kp_exit_AML JP_EISU>;
             key-positions = <13 12>;
+            timeout-ms = <15>;
         };
 
         jk_as_kana {
             bindings = <&kp_exit_AML JP_KANA>;
             key-positions = <19 18>;
+            timeout-ms = <15>;
         };
 
         sd_as_tab {
             bindings = <&kp TAB>;
             key-positions = <11 12>;
+            timeout-ms = <15>;
         };
 
         kl_as_enter {
             bindings = <&kp ENTER>;
             key-positions = <20 19>;
+            timeout-ms = <15>;
         };
 
         qwt_as_alt_f4 {
             bindings = <&kp LA(F4)>;
             key-positions = <0 1 4>;
+            timeout-ms = <15>;
         };
 
         we_as_capsword {
             bindings = <&caps_word_exit_AML>;
             key-positions = <1 2>;
+            timeout-ms = <15>;
         };
 
         io_as_capsword {
             bindings = <&caps_word_exit_AML>;
             key-positions = <7 8>;
+            timeout-ms = <15>;
         };
 
         qwb_as_mo6 {
             bindings = <&mo 6>;
             key-positions = <0 1 26>;
+            timeout-ms = <15>;
         };
 
         yunm_as_bootloader {
             bindings = <&bootloader>;
             key-positions = <5 6 29 30>;
+            timeout-ms = <15>;
         };
 
         l_center_combo_as_mb2 {
             bindings = <&mkp MB2>;
             key-positions = <15 27>;
+            timeout-ms = <15>;
         };
 
         l_ctrl_shift_combo {
             bindings = <&kp LC(LEFT_SHIFT)>;
             key-positions = <22 34>;
+            timeout-ms = <15>;
         };
 
         kdot_as_sk_shift {
             bindings = <&sk_shift_exit_AML>;
             key-positions = <19 32>;
+            timeout-ms = <15>;
         };
 
         xd_as_sk_shift {
             bindings = <&sk_shift_exit_AML>;
             key-positions = <12 23>;
+            timeout-ms = <15>;
         };
 
         zx_as_ctrl_z {
             bindings = <&kp LC(Z)>;
             key-positions = <22 23>;
+            timeout-ms = <15>;
         };
 
         xc_as_ctrl_x {
             bindings = <&kp LC(X)>;
             key-positions = <23 24>;
+            timeout-ms = <15>;
         };
 
         cv_as_ctrl_c {
             bindings = <&kp LC(C)>;
             key-positions = <24 25>;
+            timeout-ms = <15>;
         };
 
         vb_as_ctrl_v {
             bindings = <&kp LC(V)>;
             key-positions = <25 26>;
+            timeout-ms = <15>;
         };
     };
 
