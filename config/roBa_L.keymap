@@ -57,7 +57,7 @@
         };
 
         pl_as_del {
-            bindings = <&kp DELETEbb>;
+            bindings = <&kp DELETE>;
             key-positions = <9 20>;
             timeout-ms = <15>;
         };
