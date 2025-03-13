@@ -57,7 +57,7 @@
         };
 
         pl_as_del {
-            bindings = <&kp DELETE>;
+            bindings = <&kp DELETEbb>;
             key-positions = <9 20>;
             timeout-ms = <15>;
         };
@@ -152,9 +152,9 @@
             timeout-ms = <15>;
         };
 
-        qwb_as_mo6 {
+        ab_as_mo6 {
             bindings = <&mo 6>;
-            key-positions = <0 1 26>;
+            key-positions = <26 10>;
             timeout-ms = <15>;
         };
 
