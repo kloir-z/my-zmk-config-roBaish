@@ -38,7 +38,10 @@
     quick-release;
 };
 
-&mt { flavor = "balanced"; };
+&mt { 
+    flavor = "tap-preferred"; 
+    tapping-term-ms = <100>;
+};
 
 / {
     combos {
@@ -134,9 +137,9 @@
             timeout-ms = <15>;
         };
 
-        qwt_as_alt_f4 {
+        wt_as_alt_f4 {
             bindings = <&kp LA(F4)>;
-            key-positions = <0 1 4>;
+            key-positions = <1 4>;
             timeout-ms = <15>;
         };
 
@@ -152,9 +155,9 @@
             timeout-ms = <15>;
         };
 
-        ab_as_mo6 {
+        fb_as_mo6 {
             bindings = <&mo 6>;
-            key-positions = <26 10>;
+            key-positions = <13 26>;
             timeout-ms = <15>;
         };
 
@@ -191,7 +194,7 @@
         zx_as_ctrl_z {
             bindings = <&kp LC(Z)>;
             key-positions = <22 23>;
-            timeout-ms = <15>;
+            timeout-ms = <25>;
         };
 
         xc_as_ctrl_x {
