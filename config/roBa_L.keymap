@@ -50,145 +50,145 @@
         qw_as_esc_eisu {
             bindings = <&esc_eisu>;
             key-positions = <0 1>;
-            timeout-ms = <15>;
+            timeout-ms = <20>;
         };
 
         op_as_bs {
             bindings = <&kp BACKSPACE>;
             key-positions = <8 9>;
-            timeout-ms = <15>;
+            timeout-ms = <20>;
         };
 
         pl_as_del {
             bindings = <&kp DELETE>;
             key-positions = <9 20>;
-            timeout-ms = <15>;
+            timeout-ms = <20>;
         };
 
         uo_as_lbrac {
             bindings = <&kp_exit_AML JP_LBRACKET>;
             key-positions = <6 8>;
-            timeout-ms = <15>;
+            timeout-ms = <20>;
         };
 
         ip_as_rbrac {
             bindings = <&kp_exit_AML JP_RBRACKET>;
             key-positions = <7 9>;
-            timeout-ms = <15>;
+            timeout-ms = <20>;
         };
 
         jl_as_lparen {
             bindings = <&kp_exit_AML JP_LPAREN>;
             key-positions = <18 20>;
-            timeout-ms = <15>;
+            timeout-ms = <20>;
         };
 
         kmin_as_rparen {
             bindings = <&kp_exit_AML JP_RPAREN>;
             key-positions = <19 21>;
-            timeout-ms = <15>;
+            timeout-ms = <20>;
         };
 
         mdot_as_lbrace {
             bindings = <&kp_exit_AML JP_LBRACE>;
             key-positions = <30 32>;
-            timeout-ms = <15>;
+            timeout-ms = <20>;
         };
 
         comslash_as_rbrace {
             bindings = <&kp_exit_AML JP_RBRACE>;
             key-positions = <31 33>;
-            timeout-ms = <15>;
+            timeout-ms = <20>;
         };
 
         up_as_brackets {
             bindings = <&brackets>;
             key-positions = <6 9>;
-            timeout-ms = <15>;
+            timeout-ms = <20>;
         };
 
         jmin_as_parentheses  {
             bindings = <&parentheses>;
             key-positions = <18 21>;
-            timeout-ms = <15>;
+            timeout-ms = <20>;
         };
 
         df_as_eisu {
             bindings = <&kp_exit_AML JP_EISU>;
             key-positions = <13 12>;
-            timeout-ms = <15>;
+            timeout-ms = <20>;
         };
 
         jk_as_kana {
             bindings = <&kp_exit_AML JP_KANA>;
             key-positions = <19 18>;
-            timeout-ms = <15>;
+            timeout-ms = <20>;
         };
 
         sd_as_tab {
             bindings = <&kp TAB>;
             key-positions = <11 12>;
-            timeout-ms = <15>;
+            timeout-ms = <20>;
         };
 
         kl_as_enter {
             bindings = <&kp ENTER>;
             key-positions = <20 19>;
-            timeout-ms = <15>;
+            timeout-ms = <20>;
         };
 
         wt_as_alt_f4 {
             bindings = <&kp LA(F4)>;
             key-positions = <1 4>;
-            timeout-ms = <15>;
+            timeout-ms = <20>;
         };
 
         we_as_capsword {
             bindings = <&caps_word_exit_AML>;
             key-positions = <1 2>;
-            timeout-ms = <15>;
+            timeout-ms = <20>;
         };
 
         io_as_capsword {
             bindings = <&caps_word_exit_AML>;
             key-positions = <7 8>;
-            timeout-ms = <15>;
+            timeout-ms = <20>;
         };
 
         fb_as_mo6 {
             bindings = <&mo 6>;
             key-positions = <13 26>;
-            timeout-ms = <15>;
+            timeout-ms = <20>;
         };
 
         yunm_as_bootloader {
             bindings = <&bootloader>;
             key-positions = <5 6 29 30>;
-            timeout-ms = <15>;
+            timeout-ms = <20>;
         };
 
         l_center_combo_as_mb2 {
             bindings = <&mkp MB2>;
             key-positions = <15 27>;
-            timeout-ms = <15>;
+            timeout-ms = <20>;
         };
 
         l_ctrl_shift_combo {
             bindings = <&kp LC(LEFT_SHIFT)>;
             key-positions = <22 34>;
-            timeout-ms = <15>;
+            timeout-ms = <20>;
         };
 
         kdot_as_sk_shift {
             bindings = <&sk_shift_exit_AML>;
             key-positions = <19 32>;
-            timeout-ms = <15>;
+            timeout-ms = <20>;
         };
 
         xd_as_sk_shift {
             bindings = <&sk_shift_exit_AML>;
             key-positions = <12 23>;
-            timeout-ms = <15>;
+            timeout-ms = <20>;
         };
 
         zx_as_ctrl_z {
@@ -200,19 +200,19 @@
         xc_as_ctrl_x {
             bindings = <&kp LC(X)>;
             key-positions = <23 24>;
-            timeout-ms = <15>;
+            timeout-ms = <20>;
         };
 
         cv_as_ctrl_c {
             bindings = <&kp LC(C)>;
             key-positions = <24 25>;
-            timeout-ms = <15>;
+            timeout-ms = <20>;
         };
 
         vb_as_ctrl_v {
             bindings = <&kp LC(V)>;
             key-positions = <25 26>;
-            timeout-ms = <15>;
+            timeout-ms = <20>;
         };
     };
 
@@ -370,8 +370,8 @@
             bindings = <
 &kp Q                &kp W         &kp E  &kp R         &kp T                               &kp Y  &kp U  &kp I      &kp O    &kp P
 &kp A                &kp S         &kp D  &kp F         &kp G      &mkp MB1   &kp PAGE_UP   &kp H  &kp J  &kp K      &kp L    &kp MINUS
-&mt LEFT_SHIFT Z     &kp X         &kp C  &kp V         &kp B      &mo 5      &kp PAGE_DOWN &kp N  &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LCTRL            &kp LEFT_WIN  &mo 3  &kp LEFT_ALT  &kp SPACE  &mo 2      &mo 2         &mo 1                             &mo 2
+&mt LEFT_SHIFT Z     &kp X         &kp C  &kp V         &kp B      &mo 6      &kp PAGE_DOWN &kp N  &kp M  &kp COMMA  &kp DOT  &kp SLASH
+&kp LCTRL            &kp LEFT_WIN  &mo 3  &kp LEFT_ALT  &kp SPACE  &mo 2      &mo 2         &mo 1                             &mo 6
             >;
         };
 
@@ -407,7 +407,7 @@
 &kp_exit_AML Q                      &kp_exit_AML W         &kp_exit_AML E  &kp_exit_AML R         &kp_exit_AML T                                        &kp_exit_AML Y  &kp_exit_AML U    &mkp MB1            &mo 5             &mkp MB2
 &kp_exit_AML A                      &kp_exit_AML S         &kp_exit_AML D  &kp_exit_AML F         &kp_exit_AML G      &trans          &trans            &kp_exit_AML H  &kp_exit_AML J    &mkp MB1            &kp_exit_AML L    &kp_exit_AML MINUS
 &mt_exit_AML_on_tap LEFT_SHIFT Z    &kp_exit_AML X         &kp_exit_AML C  &kp_exit_AML V         &kp_exit_AML B      &trans          &trans            &kp_exit_AML N  &kp_exit_AML M    &kp_exit_AML COMMA  &kp_exit_AML DOT  &kp_exit_AML SLASH
-&kp LCTRL                           &kp LEFT_WIN           &mo_exit_AML 3  &kp LEFT_ALT           &kp_exit_AML SPACE  &mo_exit_AML 2  &mo_exit_AML 2    &mo_exit_AML 1                                                          &mo_exit_AML 2
+&kp LCTRL                           &kp LEFT_WIN           &mo_exit_AML 3  &kp LEFT_ALT           &kp_exit_AML SPACE  &mo_exit_AML 2  &mo_exit_AML 2    &mo_exit_AML 1                                                          &mo 6
             >;
         };
 
