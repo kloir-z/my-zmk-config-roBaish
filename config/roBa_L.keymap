@@ -142,23 +142,23 @@
             timeout-ms = <20>;
         };
 
-        we_as_capsword {
-            bindings = <&caps_word_exit_AML>;
-            key-positions = <1 2>;
-            timeout-ms = <20>;
-        };
+        // we_as_capsword {
+        //     bindings = <&caps_word_exit_AML>;
+        //     key-positions = <1 2>;
+        //     timeout-ms = <20>;
+        // };
 
-        io_as_capsword {
-            bindings = <&caps_word_exit_AML>;
-            key-positions = <7 8>;
-            timeout-ms = <20>;
-        };
+        // io_as_capsword {
+        //     bindings = <&caps_word_exit_AML>;
+        //     key-positions = <7 8>;
+        //     timeout-ms = <20>;
+        // };
 
-        fb_as_mo6 {
-            bindings = <&mo 6>;
-            key-positions = <13 26>;
-            timeout-ms = <20>;
-        };
+        // fb_as_mo6 {
+        //     bindings = <&mo 6>;
+        //     key-positions = <13 26>;
+        //     timeout-ms = <20>;
+        // };
 
         yunm_as_bootloader {
             bindings = <&bootloader>;
@@ -237,12 +237,12 @@
             label = "ESC_EISU";
         };
 
-        caps_word_exit_AML: caps_word_exit_AML {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&exit_AML &caps_word>;
-            label = "caps_word_exit_AML";
-        };
+        // caps_word_exit_AML: caps_word_exit_AML {
+        //     compatible = "zmk,behavior-macro";
+        //     #binding-cells = <0>;
+        //     bindings = <&exit_AML &caps_word>;
+        //     label = "caps_word_exit_AML";
+        // };
 
         sk_shift_exit_AML: sk_shift_exit_AML {
             compatible = "zmk,behavior-macro";
