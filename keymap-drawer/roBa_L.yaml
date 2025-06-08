@@ -1,0 +1,367 @@
+layout: {zmk_keyboard: roBa_L}
+layers:
+  default:
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - A
+  - S
+  - D
+  - F
+  - G
+  - '&mkp MB1'
+  - PAGE UP
+  - H
+  - J
+  - K
+  - L
+  - '-'
+  - {t: Z, h: LEFT SHIFT}
+  - X
+  - C
+  - V
+  - B
+  - Bluetooth
+  - PAGE DOWN
+  - N
+  - M
+  - ','
+  - .
+  - /
+  - LCTRL
+  - LEFT WIN
+  - Other
+  - LEFT ALT
+  - SPACE
+  - Func_Navi
+  - Func_Navi
+  - Sym_Num
+  - LEFT SHIFT
+  Sym_Num:
+  - '!'
+  - '@'
+  - '#'
+  - $
+  - '%'
+  - ^
+  - '&'
+  - _
+  - '='
+  - '0x89'
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ':'
+  - +
+  - Sft+0x89
+  - '['
+  - ''''
+  - '6'
+  - '7'
+  - '8'
+  - '9'
+  - '0'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ''
+  - '"'
+  - '{'
+  - Sft+0x87
+  - ;
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  Func_Navi:
+  - F1
+  - F2
+  - F3
+  - F4
+  - F5
+  - Ctl+W
+  - Alt+LEFT
+  - Alt+RIGHT
+  - Ctl+PAGE UP
+  - Ctl+PAGE DOWN
+  - F6
+  - F7
+  - F8
+  - F9
+  - F10
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - LEFT ARROW
+  - DOWN ARROW
+  - UP ARROW
+  - RIGHT ARROW
+  - PAGE UP
+  - F11
+  - F12
+  - ''
+  - ''
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - HOME
+  - Ctl+END
+  - Ctl+HOME
+  - END
+  - PAGE DOWN
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  Other:
+  - MUTE
+  - VOLUME DOWN
+  - VOLUME UP
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - '&toggle_mute'
+  - PRINTSCREEN
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  '4':
+  - '&kp_exit_AML Q'
+  - '&kp_exit_AML W'
+  - '&kp_exit_AML E'
+  - '&kp_exit_AML R'
+  - '&kp_exit_AML T'
+  - '&kp_exit_AML Y'
+  - '&kp_exit_AML U'
+  - '&mkp MB1'
+  - '5'
+  - '&mkp MB2'
+  - '&kp_exit_AML A'
+  - '&kp_exit_AML S'
+  - '&kp_exit_AML D'
+  - '&kp_exit_AML F'
+  - '&kp_exit_AML G'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&kp_exit_AML H'
+  - '&kp_exit_AML J'
+  - '&mkp MB1'
+  - '&mkp MB1'
+  - '&kp_exit_AML MINUS'
+  - {t: '&kp_exit_AML Z', h: LEFT SHIFT}
+  - '&kp_exit_AML X'
+  - '&kp_exit_AML C'
+  - '&kp_exit_AML V'
+  - '&kp_exit_AML B'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&kp_exit_AML N'
+  - '&kp_exit_AML M'
+  - '&kp_exit_AML COMMA'
+  - '&kp_exit_AML DOT'
+  - '&kp_exit_AML SLASH'
+  - LCTRL
+  - LEFT WIN
+  - '&mo_exit_AML 3'
+  - LEFT ALT
+  - '&kp_exit_AML SPACE'
+  - '&mo_exit_AML 2'
+  - '&mo_exit_AML 2'
+  - '&mo_exit_AML 1'
+  - LEFT SHIFT
+  '5':
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  Bluetooth:
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: BT, h: '0'}
+  - {t: BT, h: '1'}
+  - {t: BT, h: '2'}
+  - {t: BT, h: '3'}
+  - {t: BT, h: '4'}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - '1'
+  - '2'
+  - '3'
+  - ''
+  - {type: held}
+  - '&bootloader'
+  - ''
+  - ''
+  - ''
+  - ''
+  - BT CLR
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - BT CLR ALL
+combos:
+- p: [0, 1]
+  k: '&esc_eisu'
+- p: [8, 9]
+  k: BACKSPACE
+- p: [9, 20]
+  k: DELETE
+- p: [6, 8]
+  k: '&kp_exit_AML RIGHT_BRACKET'
+- p: [7, 9]
+  k: '&kp_exit_AML BACKSLASH'
+- p: [18, 20]
+  k: '&kp_exit_AML ASTERISK'
+- p: [19, 21]
+  k: '&kp_exit_AML LEFT_PARENTHESIS'
+- p: [30, 32]
+  k: '&kp_exit_AML RIGHT_BRACE'
+- p: [31, 33]
+  k: '&kp_exit_AML PIPE'
+- p: [6, 9]
+  k: '&brackets'
+- p: [18, 21]
+  k: '&parentheses'
+- p: [13, 12]
+  k: '&kp_exit_AML LANGUAGE_2'
+- p: [19, 18]
+  k: '&kp_exit_AML LANGUAGE_1'
+- p: [11, 12]
+  k: TAB
+- p: [20, 19]
+  k: ENTER
+- p: [1, 4]
+  k: Alt+F4
+- p: [1, 2]
+  k: '&caps_word_exit_AML'
+- p: [7, 8]
+  k: '&caps_word_exit_AML'
+- p: [13, 26]
+  k: Bluetooth
+- p: [5, 6, 29, 30]
+  k: '&bootloader'
+- p: [15, 27]
+  k: '&mkp MB2'
+- p: [22, 34]
+  k: Ctl+LEFT SHIFT
+- p: [19, 32]
+  k: '&sk_shift_exit_AML'
+- p: [12, 23]
+  k: '&sk_shift_exit_AML'
+- p: [22, 23]
+  k: Ctl+Z
+- p: [23, 24]
+  k: Ctl+X
+- p: [24, 25]
+  k: Ctl+C
+- p: [25, 26]
+  k: Ctl+V
