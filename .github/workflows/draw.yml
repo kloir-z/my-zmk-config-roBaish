@@ -16,8 +16,8 @@ jobs:
     with:
       commit_message: "[Draw] ${{ github.event.head_commit.message || 'Update keymap drawing' }}"
       amend_commit: false
-      keymap_patterns: "config/*.keymap"
+      keymap_patterns: "config/roBa_L.keymap"
       json_path: "config"
-      config_path: "keymap_drawer.config.yaml" # config file, ignored if not exists
+      config_path: "config/keymap_drawer.config.yaml"
       output_folder: "keymap-drawer"
       destination: "both"
