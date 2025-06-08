@@ -1,7 +1,0 @@
-draw_config:
-  key_w: 60
-  key_h: 56
-
-parse_config:
-  roBa_L:
-    qmk_info_json: config/info.json
