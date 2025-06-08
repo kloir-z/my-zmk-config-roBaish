@@ -1,48 +1,7 @@
 draw_config:
   key_w: 60
   key_h: 56
-  split_gap: 30
-  combo_w: 28
-  combo_h: 26
-  key_rx: 6
-  key_ry: 6
-  separate_combo_diagrams: true
-  combo_diagrams_scale: 2
 
 parse_config:
-  # 前処理設定をブール値で指定
-  preprocess: true
-
-  # ZMKコンボを有効化
-  zmk_combos: true
-
-  # 個別キーボード設定
   roBa_L:
     qmk_info_json: config/info.json
-    layout_name: default_layout
-
-# 日本語キーコード変換マップ（トップレベル）
-zmk_keycode_map:
-  JP_DQUOTE: '"'
-  JP_AMPERSAND: "&"
-  JP_QUOTE: "'"
-  JP_EQUAL: "="
-  JP_CARET: "^"
-  JP_YEN: "¥"
-  JP_PLUS: "+"
-  JP_TILDE: "~"
-  JP_PIPE: "|"
-  JP_AT: "@"
-  JP_COLON: ":"
-  JP_ASTERISK: "*"
-  JP_BACKQUOTE: "`"
-  JP_UNDERSCORE: "_"
-  JP_LBRACKET: "["
-  JP_RBRACKET: "]"
-  JP_LPAREN: "("
-  JP_RPAREN: ")"
-  JP_LBRACE: "{"
-  JP_RBRACE: "}"
-  JP_KANA: "かな"
-  JP_EISU: "英数"
-  JP_HANZEN: "半/全"
