@@ -119,7 +119,7 @@
         };
 
         jk_as_kana {
-            bindings = <&kp_exit_AML JP_KANA>;
+            bindings = <&safe_kana_exit_AML>;
             key-positions = <19 18>;
             timeout-ms = <20>;
         };
@@ -235,6 +235,15 @@
             #binding-cells = <0>;
             bindings = <&kp ESCAPE &kp JP_EISU>;
             label = "ESC_EISU";
+        };
+
+        safe_kana_exit_AML: safe_kana_exit_AML {
+            compatible = "zmk,behavior-macro";
+            wait-ms = <5>;
+            tap-ms = <5>;
+            #binding-cells = <0>;
+            bindings = <&kp JP_EISU &kp JP_HANZEN &tog_off MOUSE>;
+            label = "safe_kana_exit_AML";
         };
 
         // caps_word_exit_AML: caps_word_exit_AML {
