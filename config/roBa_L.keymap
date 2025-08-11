@@ -52,6 +52,12 @@
             timeout-ms = <25>;
         };
 
+        we_as_ctrl_shift_tab {
+            bindings = <&kp LS(LC(TAB))>;
+            key-positions = <1 2>;
+            timeout-ms = <25>;
+        };
+
         op_as_bs {
             bindings = <&kp BACKSPACE>;
             key-positions = <8 9>;
@@ -119,7 +125,7 @@
         };
 
         jk_as_kana {
-            bindings = <&safe_kana_exit_AML>;
+            bindings = <&kp_exit_AML JP_KANA>;
             key-positions = <19 18>;
             timeout-ms = <25>;
         };
@@ -237,14 +243,14 @@
             label = "ESC_EISU";
         };
 
-        safe_kana_exit_AML: safe_kana_exit_AML {
-            compatible = "zmk,behavior-macro";
-            wait-ms = <5>;
-            tap-ms = <5>;
-            #binding-cells = <0>;
-            bindings = <&kp JP_EISU &kp JP_HANZEN &tog_off MOUSE>;
-            label = "safe_kana_exit_AML";
-        };
+        // safe_kana_exit_AML: safe_kana_exit_AML {
+        //     compatible = "zmk,behavior-macro";
+        //     wait-ms = <5>;
+        //     tap-ms = <5>;
+        //     #binding-cells = <0>;
+        //     bindings = <&kp JP_EISU &kp JP_HANZEN &tog_off MOUSE>;
+        //     label = "safe_kana_exit_AML";
+        // };
 
         // caps_word_exit_AML: caps_word_exit_AML {
         //     compatible = "zmk,behavior-macro";
