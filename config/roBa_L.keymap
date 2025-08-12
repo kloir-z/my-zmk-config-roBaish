@@ -52,8 +52,8 @@
             timeout-ms = <25>;
         };
 
-        we_as_ctrl_shift_tab {
-            bindings = <&kp LS(LC(TAB))>;
+        we_as_ctrl_alt_tab {
+            bindings = <&kp LA(LC(TAB))>;
             key-positions = <1 2>;
             timeout-ms = <25>;
         };
