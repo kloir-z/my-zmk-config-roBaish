@@ -130,6 +130,12 @@
             timeout-ms = <25>;
         };
 
+        as_as_tab {
+            bindings = <&alt_tab>;
+            key-positions = <10 11>;
+            timeout-ms = <25>;
+        };
+
         sd_as_tab {
             bindings = <&kp TAB>;
             key-positions = <11 12>;
@@ -188,7 +194,7 @@
             bindings = <&sk_shift_exit_AML>;
             key-positions = <19 32>;
             timeout-ms = <25>;
-        };
+        }
 
         xd_as_sk_shift {
             bindings = <&sk_shift_exit_AML>;
@@ -308,6 +314,19 @@
             label = "TOGGLE_MUTE";
             wait-ms = <5>;
             tap-ms = <5>;
+        };
+
+        alt_tab: alt_tab {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <25>;
+            bindings
+                = <&macro_press &kp LALT>
+                , <&macro_wait_time 25>
+                , <&macro_tap &kp TAB>
+                , <&macro_release &kp LALT>
+                ;
         };
 
         // Commented out as currently unused, but may be used in the future 
