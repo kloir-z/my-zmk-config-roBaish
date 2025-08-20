@@ -194,7 +194,7 @@
             bindings = <&sk_shift_exit_AML>;
             key-positions = <19 32>;
             timeout-ms = <25>;
-        }
+        };
 
         xd_as_sk_shift {
             bindings = <&sk_shift_exit_AML>;
