@@ -321,12 +321,11 @@
             #binding-cells = <0>;
             wait-ms = <10>;
             tap-ms = <25>;
-            bindings
-                = <&macro_press &kp LALT>
-                , <&macro_wait_time 25>
-                , <&macro_tap &kp TAB>
-                , <&macro_release &kp LALT>
-                ;
+            bindings =
+                <&macro_press &kp LALT>,
+                <&macro_wait_time 25>,
+                <&macro_tap &kp TAB>,
+                <&macro_release &kp LALT>;
         };
 
         // Commented out as currently unused, but may be used in the future 
