@@ -70,6 +70,12 @@
             timeout-ms = <25>;
         };
 
+        ko_as_lclick_aml {
+            bindings = <&lclick_to_AML>;
+            key-positions = <8 19>;
+            timeout-ms = <25>;
+        };
+
         uo_as_lbrac {
             bindings = <&kp_exit_AML JP_LBRACKET>;
             key-positions = <6 8>;
@@ -319,13 +325,21 @@
         alt_tab: alt_tab {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <10>;
+            wait-ms = <15>;
             tap-ms = <25>;
             bindings =
                 <&macro_press &kp LALT>,
                 <&macro_wait_time 25>,
                 <&macro_tap &kp TAB>,
                 <&macro_release &kp LALT>;
+        };
+
+        lclick_to_AML: lclick_to_AML {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <0>;
+            bindings = <&mkp MB1 &to MOUSE>;
         };
 
         // Commented out as currently unused, but may be used in the future 
