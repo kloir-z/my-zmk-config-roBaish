@@ -70,8 +70,8 @@
             timeout-ms = <25>;
         };
 
-        ko_as_lclick_aml {
-            bindings = <&lclick_to_AML>;
+        ko_as_lclick {
+            bindings = <&mkp MB1>;
             key-positions = <8 19>;
             timeout-ms = <25>;
         };
@@ -334,13 +334,13 @@
                 <&macro_release &kp LALT>;
         };
 
-        lclick_to_AML: lclick_to_AML {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <0>;
-            tap-ms = <3>;
-            bindings = <&to MOUSE &mkp MB1>;
-        };
+        // lclick_to_AML: lclick_to_AML {
+        //     compatible = "zmk,behavior-macro";
+        //     #binding-cells = <0>;
+        //     wait-ms = <0>;
+        //     tap-ms = <3>;
+        //     bindings = <&to MOUSE &mkp MB1>;
+        // };
 
         rclick_to_AML: rclick_to_AML {
             compatible = "zmk,behavior-macro";
