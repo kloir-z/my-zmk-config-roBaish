@@ -458,10 +458,10 @@
 
         MOUSE {
             bindings = <
-&kp_exit_AML Q                      &kp_exit_AML W         &kp_exit_AML E  &kp_exit_AML R         &kp_exit_AML T                                        &kp_exit_AML Y  &kp_exit_AML U    &mkp MB1            &mo 5             &mkp MB2
-&kp_exit_AML A                      &kp_exit_AML S         &kp_exit_AML D  &kp_exit_AML F         &kp_exit_AML G      &trans          &trans            &kp_exit_AML H  &kp_exit_AML J    &mkp MB1            &kp L             &kp_exit_AML MINUS
-&mt_exit_AML_on_tap LEFT_SHIFT Z    &kp_exit_AML X         &kp_exit_AML C  &kp_exit_AML V         &kp_exit_AML B      &trans          &trans            &kp_exit_AML N  &kp_exit_AML M    &kp_exit_AML COMMA  &kp_exit_AML DOT  &kp_exit_AML SLASH
-&kp LCTRL                           &kp LEFT_WIN           &mo_exit_AML 3  &kp LEFT_ALT           &kp_exit_AML SPACE  &mo_exit_AML 2  &mo_exit_AML 2    &mo_exit_AML 1                                                          &trans 
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &mkp MB1  &mo 5   &mkp MB2
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &mkp MB1  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans    &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                            &trans
             >;
         };
 
