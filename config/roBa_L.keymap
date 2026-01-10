@@ -307,7 +307,7 @@
             bindings = <
 &kp F1             &kp F2        &kp F3        &kp F4        &kp F5                          &kp LC(W)       &kp LA(LEFT)    &kp LA(RIGHT)  &kp LC(PAGE_UP)  &kp LC(PAGE_DOWN)
 &kp F6             &kp F7        &kp F8        &kp F9        &kp F10     &trans      &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW   &kp RIGHT_ARROW  &kp PAGE_UP
-&mt LEFT_SHIFT F11 &kp F12       &none         &none         &none       &trans      &trans  &kp HOME        &kp LC(END)     &kp LC(HOME)   &kp END          &kp PAGE_DOWN
+&kp F11            &kp F12       &none         &none         &none       &trans      &trans  &kp HOME        &kp LC(END)     &kp LC(HOME)   &kp END          &kp PAGE_DOWN
 &trans             &trans        &trans        &trans        &trans      &trans      &trans  &trans                                                          &trans
             >;
         };
