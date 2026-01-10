@@ -66,13 +66,13 @@
         };
 
         ko_as_lclick {
-            bindings = <&mkp MB1>;
+            bindings = <&mkp_exit_AML MB1>;
             key-positions = <8 19>;
             timeout-ms = <25>;
         };
 
         o_min_as_rclick {
-            bindings = <&mkp MB2>;
+            bindings = <&mkp_exit_AML MB2>;
             key-positions = <8 21>;
             timeout-ms = <25>;
         };
@@ -236,6 +236,15 @@
             #binding-cells = <1>;
             bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &exit_AML>;
             label = "KP_exit_AML";
+        };
+
+        mkp_exit_AML: mkp_exit_AML {
+            compatible = "zmk,behavior-macro-one-param";
+            wait-ms = <0>;
+            tap-ms = <0>;
+            #binding-cells = <1>;
+            bindings = <&macro_param_1to1 &mkp MACRO_PLACEHOLDER &exit_AML>;
+            label = "MKP_exit_AML";
         };
 
         mo_exit_AML: mo_exit_AML {
