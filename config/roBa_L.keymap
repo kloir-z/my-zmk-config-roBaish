@@ -66,13 +66,13 @@
         };
 
         ko_as_lclick {
-            bindings = <&mkp_exit_AML MB1>;
+            bindings = <&mkp MB1>;
             key-positions = <8 19>;
             timeout-ms = <25>;
         };
 
         o_min_as_rclick {
-            bindings = <&mkp_exit_AML MB2>;
+            bindings = <&mkp MB2>;
             key-positions = <8 21>;
             timeout-ms = <25>;
         };
