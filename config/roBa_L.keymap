@@ -32,11 +32,6 @@
 #define MOUSE 4
 #define SCROLL 5
 
-&mt { 
-    flavor = "tap-preferred"; 
-    tapping-term-ms = <200>;
-};
-
 / {
     combos {
         compatible = "zmk,combos";
@@ -161,18 +156,6 @@
             timeout-ms = <25>;
         };
 
-        l_center_combo_as_mb2 {
-            bindings = <&mkp MB2>;
-            key-positions = <15 27>;
-            timeout-ms = <25>;
-        };
-
-        l_ctrl_shift_combo {
-            bindings = <&kp LC(LEFT_SHIFT)>;
-            key-positions = <22 34>;
-            timeout-ms = <25>;
-        };
-
         zx_as_ctrl_z {
             bindings = <&kp LC(Z)>;
             key-positions = <22 23>;
@@ -287,46 +270,46 @@
         compatible = "zmk,keymap";
         default_layer {
             bindings = <
-&kp Q                &kp W         &kp E  &kp R         &kp T                                    &kp Y  &kp U  &kp I      &kp O    &kp P
-&kp A                &kp S         &kp D  &kp F         &kp G      &mkp MB1        &kp PAGE_UP   &kp H  &kp J  &kp K      &kp L    &kp MINUS
-&kp Z                &kp X         &kp C  &kp V         &kp B      &mo 6           &kp PAGE_DOWN &kp N  &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LCTRL            &kp LEFT_WIN  &mo 3  &kp LEFT_ALT  &kp SPACE  &kp LEFT_SHIFT  &mo 2         &mo 1                             &kp LEFT_SHIFT 
+&kp Q      &kp W         &kp E  &kp R         &kp T                                    &kp Y  &kp U  &kp I      &kp O    &kp P
+&kp A      &kp S         &kp D  &kp F         &kp G      &mkp MB1            &mkp MB1  &kp H  &kp J  &kp K      &kp L    &kp MINUS
+&kp Z      &kp X         &kp C  &kp V         &kp B      &mkp MB2            &mkp MB2  &kp N  &kp M  &kp COMMA  &kp DOT  &kp SLASH
+&kp LCTRL  &kp LEFT_WIN  &mo 3  &kp LEFT_ALT  &kp SPACE  &kp LEFT_SHIFT      &mo 2     &mo 1                             &kp LEFT_SHIFT 
             >;
         };
 
         Sym_Num {
             bindings = <
-&kp EXCLAMATION    &kp JP_DQUOTE    &kp HASH         &kp DOLLAR      &kp PERCENT                         &kp JP_AMPERSAND  &kp JP_QUOTE       &kp JP_EQUAL     &kp JP_CARET      &kp JP_YEN
-&kp NUMBER_1       &kp NUMBER_2     &kp NUMBER_3     &kp NUMBER_4    &kp NUMBER_5    &trans      &trans  &kp JP_PLUS       &kp JP_TILDE       &kp JP_PIPE      &kp JP_AT         &kp JP_COLON
-&kp NUMBER_6       &kp NUMBER_7     &kp NUMBER_8     &kp NUMBER_9    &kp NUMBER_0    &trans      &trans  &none             &kp JP_ASTERISK    &kp JP_BACKQUOTE &kp JP_UNDERSCORE &kp SEMICOLON 
-&trans             &trans           &trans           &trans          &trans          &trans      &trans  &trans                                                                  &trans
+&kp EXCLAMATION  &kp JP_DQUOTE  &kp HASH      &kp DOLLAR    &kp PERCENT                      &kp JP_AMPERSAND  &kp JP_QUOTE     &kp JP_EQUAL      &kp JP_CARET       &kp JP_YEN
+&kp NUMBER_1     &kp NUMBER_2   &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5  &trans     &trans  &kp JP_PLUS       &kp JP_TILDE     &kp JP_PIPE       &kp JP_AT          &kp JP_COLON
+&kp NUMBER_6     &kp NUMBER_7   &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &trans     &trans  &none             &kp JP_ASTERISK  &kp JP_BACKQUOTE  &kp JP_UNDERSCORE  &kp SEMICOLON 
+&trans           &trans         &trans        &trans        &trans        &trans     &trans  &trans                                                                  &trans
             >;
         };
 
         Func_Navi {
             bindings = <
-&kp F1             &kp F2        &kp F3        &kp F4        &kp F5                          &kp LC(W)       &kp LA(LEFT)    &kp LA(RIGHT)  &kp LC(PAGE_UP)  &kp LC(PAGE_DOWN)
-&kp F6             &kp F7        &kp F8        &kp F9        &kp F10     &trans      &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW   &kp RIGHT_ARROW  &kp PAGE_UP
-&kp F11            &kp F12       &none         &none         &none       &trans      &trans  &kp HOME        &kp LC(END)     &kp LC(HOME)   &kp END          &kp PAGE_DOWN
-&trans             &trans        &trans        &trans        &trans      &trans      &trans  &trans                                                          &trans
+&kp F1   &kp F2   &kp F3  &kp F4  &kp F5                      &kp LC(W)       &kp LA(LEFT)    &kp LA(RIGHT)  &kp LC(PAGE_UP)  &kp LC(PAGE_DOWN)
+&kp F6   &kp F7   &kp F8  &kp F9  &kp F10  &trans     &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW   &kp RIGHT_ARROW  &kp PAGE_UP
+&kp F11  &kp F12  &none   &none   &none    &trans     &trans  &kp HOME        &kp LC(END)     &kp LC(HOME)   &kp END          &kp PAGE_DOWN
+&trans   &trans   &trans  &trans  &trans   &trans     &trans  &trans                                                          &trans
             >;
         };
 
         Other {
             bindings = <
-&kp C_MUTE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &none            &none                       &none    &none     &none     &none     &none 
-&none       &none              &toggle_mute     &kp PRINTSCREEN  &none   &trans      &trans  &none    &none     &none     &none     &none 
-&none       &none              &none            &none            &none   &trans      &trans  &none    &none     &none     &none     &none 
-&trans      &trans             &trans           &trans           &trans  &trans      &trans  &trans                                 &trans
+&kp C_MUTE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &none            &none                      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4   
+&none       &none              &toggle_mute     &kp PRINTSCREEN  &none   &trans     &trans  &none         &none         &none         &none         &none          
+&none       &none              &none            &none            &none   &trans     &trans  &none         &none         &none         &none         &bt BT_CLR     
+&trans      &trans             &trans           &trans           &trans  &trans     &trans  &none                                                   &bt BT_CLR_ALL 
             >;
         };
 
         MOUSE {
             bindings = <
-&trans          &trans  &trans  &trans  &trans                                    &trans          &trans  &mkp MB1  &mo 5   &mkp MB2
-&trans          &trans  &trans  &trans  &trans  &trans          &trans            &trans          &trans  &mkp MB1  &trans  &trans
-&trans          &trans  &trans  &trans  &trans  &trans          &trans            &trans          &trans  &trans    &trans  &trans
-&trans          &trans  &trans  &trans  &trans  &trans          &mo_exit_AML 2    &mo_exit_AML 1                            &trans
+&trans  &trans  &trans  &trans  &trans                              &trans          &trans  &mkp MB1  &mo 5   &mkp MB2
+&trans  &trans  &trans  &trans  &trans  &trans      &trans          &trans          &trans  &mkp MB1  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans          &trans          &trans  &trans    &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &mo_exit_AML 2  &mo_exit_AML 1                            &trans
             >;
         };
 
@@ -336,15 +319,6 @@
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
-            >;
-        };
-
-        Bluetooth {
-            bindings = <
-&none  &none         &none         &none         &none                          &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-&none  &none         &none         &none         &none  &none      &none        &none         &none         &none         &none         &none
-&none  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none  &none      &bootloader  &none         &none         &none         &none         &bt BT_CLR
-&none  &none         &none         &none         &none  &none      &none        &none                                                   &bt BT_CLR_ALL
             >;
         };
     };
