@@ -271,8 +271,8 @@
         default_layer {
             bindings = <
 &kp Q      &kp W         &kp E  &kp R         &kp T                                                        &kp Y  &kp U  &kp I      &kp O    &kp P
-&kp A      &kp S         &kp D  &kp F         &kp G      &kp LG(LC(LEFT_ARROW))   &kp LG(LC(LEFT_ARROW))   &kp H  &kp J  &kp K      &kp L    &kp MINUS
-&kp Z      &kp X         &kp C  &kp V         &kp B      &kp LG(LC(RIGHT_ARROW))  &kp LG(LC(RIGHT_ARROW))  &kp N  &kp M  &kp COMMA  &kp DOT  &kp SLASH
+&kp A      &kp S         &kp D  &kp F         &kp G      &kp LG(LC(LEFT_ARROW))   &kp LC(TAB)              &kp H  &kp J  &kp K      &kp L    &kp MINUS
+&kp Z      &kp X         &kp C  &kp V         &kp B      &kp LG(LC(RIGHT_ARROW))  &kp LS(LC(TAB))          &kp N  &kp M  &kp COMMA  &kp DOT  &kp SLASH
 &kp LCTRL  &kp LEFT_WIN  &mo 3  &kp LEFT_ALT  &kp SPACE  &kp LEFT_SHIFT           &mo 2                    &mo 1                             &mkp MB1
             >;
         };
