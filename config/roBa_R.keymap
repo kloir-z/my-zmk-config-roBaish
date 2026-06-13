@@ -1,8 +1,12 @@
 #include "roBa_L.keymap"
+#include <input/processors.dtsi>
 
 #include "boards/shields/Test/roBa_R.overlay"
 &trackball {
-    automouse-layer = <MOUSE>;
+    // automouse-layer はドライバ側で管理せず、zip_temp_layer 側に一本化する。
+    // （ドライバの k_timer が切れると延長中でも MOUSE レイヤーを消してしまい、
+    //   クリック/スクロールでのタイムアウト延長と併存できないため）
+    // automouse-layer = <MOUSE>;
     scroll-layers = <SCROLL>;
     snipe-layers = <2>;
 
@@ -19,4 +23,14 @@
     //     tap-ms = <5>;
     // };
 
+};
+
+// クリック・右クリック・スクロールでも MOUSE レイヤーのタイムアウトを延長する。
+// 物理トラックボールの移動・スクロールは trackball_listener (roBa_R.overlay) 側で延長。
+&mkp_input_listener {
+    input-processors = <&zip_temp_layer MOUSE 2000>;
+};
+
+&msc_input_listener {
+    input-processors = <&zip_temp_layer MOUSE 2000>;
 };

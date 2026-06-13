@@ -18,7 +18,8 @@
     trackball_listener {
         compatible = "zmk,input-listener";
         device = <&trackball>;
-
+        // トラックボール移動・物理スクロールで MOUSE レイヤーを2秒延長
+        input-processors = <&zip_temp_layer MOUSE 2000>;
     };
 };
 
