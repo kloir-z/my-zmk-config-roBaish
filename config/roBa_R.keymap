@@ -36,8 +36,19 @@
     excluded-positions = <7 8 9 19 42>;
 };
 
+// 物理トラックボールの移動・スクロールで MOUSE レイヤーを2秒延長する。
+// ※ overlay 側に置くと、シールド機構が overlay を単体コンパイルする経路で
+//    MOUSE マクロ(roBa_L.keymap の #define)が未定義になりビルドが落ちる。
+//    MOUSE と zip_temp_layer が両方使える keymap 側で定義する。
+/ {
+    trackball_listener {
+        compatible = "zmk,input-listener";
+        device = <&trackball>;
+        input-processors = <&zip_temp_layer MOUSE 2000>;
+    };
+};
+
 // クリック・右クリック・スクロールでも MOUSE レイヤーのタイムアウトを延長する。
-// 物理トラックボールの移動・スクロールは trackball_listener (roBa_R.overlay) 側で延長。
 &mkp_input_listener {
     input-processors = <&zip_temp_layer MOUSE 2000>;
 };
