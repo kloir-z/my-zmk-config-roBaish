@@ -30,10 +30,11 @@
 // excluded-positions: AML 中でも下記の位置のキーは MOUSE を抜けない（クリック/スクロール継続用）。
 //   それ以外のキーを押すと押した瞬間に MOUSE を抜ける（通常の &kp/&mt のまま通るのでホールド/長押しリピートは壊れない）。
 //   7=I(MB1) 8=O(scroll) 9=P(MB2) 19=K(MB1) 42=右親指(MB1)
+//   34=LCTRL 35=LWIN 37=LALT 39=LSHIFT … 最下段モディファイア。Shift+クリック等のため AML を維持する。
 //   ※ I/O/P を打って誤爆するのが気になる場合は 7 と 9 をリストから外すと、それらも押下で即解除になる。
 &zip_temp_layer {
     require-prior-idle-ms = <150>;
-    excluded-positions = <7 8 9 19 42>;
+    excluded-positions = <7 8 9 19 34 35 37 39 42>;
 };
 
 // 物理トラックボールの移動・スクロールで MOUSE レイヤーを2秒延長する。
