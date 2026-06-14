@@ -25,23 +25,23 @@
 
 };
 
+// オートマウスレイヤー(MOUSE)の誤爆対策。
+// require-prior-idle-ms: 直前 150ms 以内にキー入力があれば、トラボ移動でも MOUSE を発動させない（タイピング中の誤爆防止の本命）。
+// excluded-positions: AML 中でも下記の位置のキーは MOUSE を抜けない（クリック/スクロール継続用）。
+//   それ以外のキーを押すと押した瞬間に MOUSE を抜ける（通常の &kp/&mt のまま通るのでホールド/長押しリピートは壊れない）。
+//   7=I(MB1) 8=O(scroll) 9=P(MB2) 19=K(MB1) 42=右親指(MB1)
+//   ※ I/O/P を打って誤爆するのが気になる場合は 7 と 9 をリストから外すと、それらも押下で即解除になる。
+&zip_temp_layer {
+    require-prior-idle-ms = <150>;
+    excluded-positions = <7 8 9 19 42>;
+};
+
 // クリック・右クリック・スクロールでも MOUSE レイヤーのタイムアウトを延長する。
-// 物理トラックボールの移動・スクロールは下の trackball_listener で延長。
+// 物理トラックボールの移動・スクロールは trackball_listener (roBa_R.overlay) 側で延長。
 &mkp_input_listener {
     input-processors = <&zip_temp_layer MOUSE 2000>;
 };
 
 &msc_input_listener {
     input-processors = <&zip_temp_layer MOUSE 2000>;
-};
-
-// 物理トラックボールの移動・スクロールで MOUSE レイヤーを2秒延長する。
-// シールド overlay (roBa_R.overlay) は単独でもビルドされ、その文脈では MOUSE が
-// 未定義になるため、MOUSE を解決できる keymap 側でこのリスナーを定義する。
-/ {
-    trackball_listener {
-        compatible = "zmk,input-listener";
-        device = <&trackball>;
-        input-processors = <&zip_temp_layer MOUSE 2000>;
-    };
 };

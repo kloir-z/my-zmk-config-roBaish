@@ -73,37 +73,37 @@
         };
 
         uo_as_lbrac {
-            bindings = <&kp_exit_AML JP_LBRACKET>;
+            bindings = <&kp JP_LBRACKET>;
             key-positions = <6 8>;
             timeout-ms = <25>;
         };
 
         ip_as_rbrac {
-            bindings = <&kp_exit_AML JP_RBRACKET>;
+            bindings = <&kp JP_RBRACKET>;
             key-positions = <7 9>;
             timeout-ms = <25>;
         };
 
         jl_as_lparen {
-            bindings = <&kp_exit_AML JP_LPAREN>;
+            bindings = <&kp JP_LPAREN>;
             key-positions = <18 20>;
             timeout-ms = <25>;
         };
 
         kmin_as_rparen {
-            bindings = <&kp_exit_AML JP_RPAREN>;
+            bindings = <&kp JP_RPAREN>;
             key-positions = <19 21>;
             timeout-ms = <25>;
         };
 
         mdot_as_lbrace {
-            bindings = <&kp_exit_AML JP_LBRACE>;
+            bindings = <&kp JP_LBRACE>;
             key-positions = <30 32>;
             timeout-ms = <25>;
         };
 
         comslash_as_rbrace {
-            bindings = <&kp_exit_AML JP_RBRACE>;
+            bindings = <&kp JP_RBRACE>;
             key-positions = <31 33>;
             timeout-ms = <25>;
         };
@@ -121,13 +121,13 @@
         };
 
         df_as_eisu {
-            bindings = <&kp_exit_AML JP_EISU>;
+            bindings = <&kp JP_EISU>;
             key-positions = <13 12>;
             timeout-ms = <25>;
         };
 
         jk_as_kana {
-            bindings = <&kp_exit_AML JP_KANA>;
+            bindings = <&kp JP_KANA>;
             key-positions = <19 18>;
             timeout-ms = <25>;
         };
@@ -185,14 +185,14 @@
         parentheses: parentheses {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp JP_LPAREN &kp JP_RPAREN &kp_exit_AML LEFT>;
+            bindings = <&kp JP_LPAREN &kp JP_RPAREN &kp LEFT>;
             label = "PARENTHESES";
         };
 
         brackets: brackets {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp JP_LBRACKET &kp JP_RBRACKET &kp_exit_AML LEFT>;
+            bindings = <&kp JP_LBRACKET &kp JP_RBRACKET &kp LEFT>;
             label = "BRACKETS";
         };
 
@@ -203,50 +203,6 @@
             label = "ESC_EISU";
         };
 
-        exit_AML: exit_AML {
-            compatible = "zmk,behavior-macro";
-            wait-ms = <0>;
-            tap-ms = <0>;
-            #binding-cells = <0>;
-            bindings = <&tog_off MOUSE>;
-            label = "exit_AML";
-        };
-
-        kp_exit_AML: kp_exit_AML {
-            compatible = "zmk,behavior-macro-one-param";
-            wait-ms = <0>;
-            tap-ms = <0>;
-            #binding-cells = <1>;
-            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &exit_AML>;
-            label = "KP_exit_AML";
-        };
-
-        mkp_exit_AML: mkp_exit_AML {
-            compatible = "zmk,behavior-macro-one-param";
-            wait-ms = <0>;
-            tap-ms = <0>;
-            #binding-cells = <1>;
-            bindings = <&macro_param_1to1 &mkp MACRO_PLACEHOLDER &exit_AML>;
-            label = "MKP_exit_AML";
-        };
-
-        mo_exit_AML: mo_exit_AML {
-            compatible = "zmk,behavior-macro-one-param";
-            wait-ms = <0>;
-            tap-ms = <0>;
-            #binding-cells = <1>;
-            bindings =
-                <&macro_press>,
-                <&macro_param_1to1 &mo MACRO_PLACEHOLDER>,
-                <&macro_tap>,
-                <&exit_AML>,
-                <&macro_pause_for_release>,
-                <&macro_release>,
-                <&macro_param_1to1 &mo MACRO_PLACEHOLDER>,
-                <&macro_tap>;
-            label = "MO_exit_AML";
-        };
-
         toggle_mute: toggle_mute {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -254,15 +210,6 @@
             label = "TOGGLE_MUTE";
             wait-ms = <5>;
             tap-ms = <5>;
-        };
-    };
-
-    behaviors {
-        tog_off: toggle_layer_off {
-            compatible = "zmk,behavior-toggle-layer";
-            #binding-cells = <1>;
-            display-name = "Toggle Layer Off";
-            toggle-mode = "off";
         };
     };
 
@@ -309,7 +256,7 @@
 &trans  &trans  &trans          &trans  &trans                             &trans          &trans  &mkp MB1  &mo 5   &mkp MB2
 &trans  &trans  &trans          &trans  &trans  &trans     &trans          &trans          &trans  &mkp MB1  &trans  &trans
 &trans  &trans  &trans          &trans  &trans  &trans     &trans          &trans          &trans  &trans    &trans  &trans
-&trans  &trans  &mo_exit_AML 3  &trans  &trans  &trans     &mo_exit_AML 2  &mo_exit_AML 1                            &trans
+&trans  &trans  &mo 3           &trans  &trans  &trans     &mo 2           &mo 1                                     &trans
             >;
         };
 
