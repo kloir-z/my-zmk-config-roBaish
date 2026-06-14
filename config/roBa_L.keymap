@@ -49,7 +49,7 @@
         };
 
         op_as_bs {
-            bindings = <&kp BACKSPACE>;
+            bindings = <&bs_exit_AML>;
             key-positions = <8 9>;
             timeout-ms = <25>;
         };
@@ -210,6 +210,30 @@
             label = "TOGGLE_MUTE";
             wait-ms = <5>;
             tap-ms = <5>;
+        };
+
+        // BS を送出しつつ MOUSE(AML) を明示的に抜ける。
+        // O(8)+P(9) は両方 excluded-positions のため通常はキー押下で AML が切れないが、
+        // tog_off で MOUSE レイヤーを off にすると temp_layer が外部 deactivation を検知して解除する。
+        // O単体(scroll)/P単体(右クリック)はコンボではないので無影響。
+        bs_exit_AML: bs_exit_AML {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <0>;
+            bindings = <&kp BACKSPACE &tog_off MOUSE>;
+            label = "BS_EXIT_AML";
+        };
+    };
+
+    behaviors {
+        // 指定レイヤーを「無条件に off」にする(トグルではない)。
+        // MOUSE が既に off のときに呼んでも何も起きないため、コンボを全レイヤーで安全に使える。
+        tog_off: toggle_layer_off {
+            compatible = "zmk,behavior-toggle-layer";
+            #binding-cells = <1>;
+            display-name = "Toggle Layer Off";
+            toggle-mode = "off";
         };
     };
 
