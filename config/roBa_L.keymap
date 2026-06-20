@@ -48,8 +48,11 @@
             timeout-ms = <25>;
         };
 
+        // O(8)+P(9) で BACKSPACE。&kp 直接バインドなので押しっぱなしで OS リピート=連打が効く。
+        // ※コンボ→マクロ経由だと hold が伝播せず連打にならないため、連打優先で直接 &kp にしている。
+        //   この方式では BS では AML(MOUSE) を自動解除しない(BS後の通常文字入力で自然に解除される)。
         op_as_bs {
-            bindings = <&bs_exit_AML>;
+            bindings = <&kp BACKSPACE>;
             key-positions = <8 9>;
             timeout-ms = <25>;
         };
@@ -210,40 +213,6 @@
             label = "TOGGLE_MUTE";
             wait-ms = <5>;
             tap-ms = <5>;
-        };
-
-        // BS を送出しつつ MOUSE(AML) を明示的に抜ける。
-        // O(8)+P(9) は両方 excluded-positions のため通常はキー押下で AML が切れないが、
-        // tog_off で MOUSE レイヤーを off にすると temp_layer が外部 deactivation を検知して解除する。
-        // O単体(scroll)/P単体(右クリック)はコンボではないので無影響。
-        //
-        // 長押しリピート対応:
-        //   コンボ押下中ずっと BACKSPACE を「押しっぱなし」にすることで、
-        //   OS のタイプマティックリピートが効いて連打になる。
-        //   ・&tog_off MOUSE        … 先に AML を抜ける(タップ)
-        //   ・&macro_press BACKSPACE … BACKSPACE を押す
-        //   ・&macro_pause_for_release … コンボ(O or P)が離されるまで待機 = 押しっぱなし
-        //   ・&macro_release BACKSPACE … コンボ解除でBACKSPACEを離す
-        bs_exit_AML: bs_exit_AML {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&tog_off MOUSE>
-                , <&macro_press &kp BACKSPACE>
-                , <&macro_pause_for_release>
-                , <&macro_release &kp BACKSPACE>;
-            label = "BS_EXIT_AML";
-        };
-    };
-
-    behaviors {
-        // 指定レイヤーを「無条件に off」にする(トグルではない)。
-        // MOUSE が既に off のときに呼んでも何も起きないため、コンボを全レイヤーで安全に使える。
-        tog_off: toggle_layer_off {
-            compatible = "zmk,behavior-toggle-layer";
-            #binding-cells = <1>;
-            display-name = "Toggle Layer Off";
-            toggle-mode = "off";
         };
     };
 

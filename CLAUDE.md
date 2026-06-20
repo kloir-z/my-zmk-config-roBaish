@@ -50,7 +50,7 @@ zephyr/module.yml                 # ZMK モジュール定義
 
 **日本語キーボード変換定義**: OS設定を日本語キーボードのまま使う `JP_*` マクロが `roBa_L.keymap` 冒頭に定義されている。
 
-**オートマウスレイヤー (AML)**: トラックボール操作で MOUSE レイヤーが自動的に ON になる。キー入力時に `exit_AML` / `kp_exit_AML` / `mkp_exit_AML` / `mo_exit_AML` マクロで OFF にする。`tog_off` カスタムビヘイビアを使用。
+**オートマウスレイヤー (AML)**: トラックボール操作で MOUSE レイヤーが自動的に ON になる（`roBa_R.keymap` の `zip_temp_layer` 入力プロセッサ）。`excluded-positions` 以外のキーを押すと自動で OFF になる。`require-prior-idle-ms` でタイピング中の誤発動を防ぐ。クリック/スクロール用キー(I/O/P/K/右親指)とモディファイア(Ctrl/Win/Alt/Shift)は `excluded-positions` に入れて AML を維持する。
 
 ## キーマトリクス
 
